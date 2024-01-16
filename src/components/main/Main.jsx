@@ -3,7 +3,7 @@ import Curtidas from "../../../public/images/curtidas.jpg"
 
 const MainContent = () => {
     return (
-        <div className="flex-1 space-x-5">
+        <section className="flex-1 space-x-5">
             <div className="gap-4">
                 <h2 className="font-bold text-2xl my-10">Projetos</h2>
                 <div className="m-4">
@@ -41,7 +41,7 @@ const MainContent = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

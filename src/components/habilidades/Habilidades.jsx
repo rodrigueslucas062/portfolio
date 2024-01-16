@@ -1,8 +1,8 @@
 const Habilidades = () => {
     return (
-        <div>
+        <section>
             <h1>oi</h1>
-        </div>
+        </section>
     )
 }
 

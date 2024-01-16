@@ -6,16 +6,16 @@ import Sobre from "@/components/sobre/Sobre";
 
 export default function Home() {
   return (
-    <main className="h-screen flex flex-col">
+    <div className="h-screen flex flex-col">
       <Navbar />
-      <div className="flex flex-col flex-1 p-2">
-        <div className="bg-zinc-800 rounded-lg h-full p-8">
+      <div className="flex flex-col flex-1">
+        <main className="bg-zinc-800 rounded-lg h-full p-8">
           <Banner />
           <Sobre />
           <Habilidades />
           <MainContent />
-        </div>
+        </main>
       </div>
-    </main>
+    </div>
   );
 }
