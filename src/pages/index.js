@@ -1,4 +1,5 @@
 import Banner from "@/components/banner/Banner";
+import Contato from "@/components/contato/Contato";
 import Habilidades from "@/components/habilidades/Habilidades";
 import MainContent from "@/components/main/Main";
 import Navbar from "@/components/navbar/Navbar";
@@ -15,6 +16,7 @@ export default function Home() {
           <Habilidades />
           <MainContent />
         </main>
+        <Contato />
       </div>
     </div>
   );
