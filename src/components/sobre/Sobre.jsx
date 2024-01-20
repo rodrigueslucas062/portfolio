@@ -1,11 +1,5 @@
 import { GraduationCap } from "lucide-react";
 import Image from "next/image";
-import htmlIcon from '../../../public/images/icons/html.png';
-import cssIcon from '../../../public/images/icons/css.png';
-import javascriptIcon from '../../../public/images/icons/javascript.png';
-import reactIcon from '../../../public/images/icons/react.png';
-import nextjsIcon from '../../../public/images/icons/nextjs.png';
-import figmaIcon from '../../../public/images/icons/figma.png';
 
 const Sobre = () => {
     const avatarUrl = 'https://avatars.githubusercontent.com/u/39422637?s=400&u=b6bddbc97edde098ad4d50599d99479aff0cb6d9&v=4';
@@ -33,37 +27,34 @@ const Sobre = () => {
                             <span className="text-sm text-gray-400">UX/UI</span>
                         </div>
                     </div>
-                    <div className="py-4 px-16">
-                        <div className="flex flex-col">
-                            <h1 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">Tecnologias</h1>
-                            <div className="flex gap-12 items-center">
-                                <div className="align-middle">
-                                    <Image width={36} height={36} src={htmlIcon} alt="HTML Icon" />
-                                    <span className="block text-xs text-gray-400 mt-2">HTML</span>
+                    <div className="py-4 px-10">
+                        <h1 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">Tecnologias</h1>
+                        <div className="flex flex-col space-y-2">
+                            <div className="flex flex-col-5 gap-4">
+                                <div className="bg-zinc-800 p-2 px-4 rounded-2xl border-2 border-gray-700 flex items-center justify-center">
+                                    <span className="text-xs text-gray-400 px-4 ">HTML</span>
                                 </div>
-                                <div className="align-middle">
-                                    <Image width={36} height={36} src={cssIcon} alt="CSS Icon" />
-                                    <span className="block text-xs text-gray-400 mt-2">CSS</span>
+                                <div className="bg-zinc-800 p-2 px-4 rounded-2xl border-2 border-gray-700 flex items-center justify-center">
+                                    <span className="text-xs text-gray-400 px-4 ">CSS</span>
                                 </div>
-                                <div className="align-middle">
-                                    <Image width={36} height={36} src={javascriptIcon} alt="JavaScript Icon" />
-                                    <span className="block text-xs text-gray-400 mt-2">JavaScript</span>
+                                <div className="bg-zinc-800 p-2 px-4 rounded-2xl border-2 border-gray-700 flex items-center justify-center">
+                                    <span className="text-xs text-gray-400 px-4 ">JavaScript</span>
                                 </div>
-                                <div className="align-middle">
-                                    <Image width={36} height={36} src={reactIcon} alt="React Icon" />
-                                    <span className="block text-xs text-gray-400 mt-2">React</span>
+                            </div>
+                            <div className="ml-2 flex flex-col-3 gap-6">
+                                <div className="bg-zinc-800 p-2 px-4 rounded-2xl border-2 border-gray-700 flex items-center justify-center">
+                                    <span className="text-xs text-gray-400 px-4 ">React</span>
                                 </div>
-                                <div className="align-middle">
-                                    <Image width={36} height={36} src={nextjsIcon} alt="Next.js Icon" />
-                                    <span className="block text-xs text-gray-400 mt-2">Next.js</span>
+                                <div className="bg-zinc-800 p-2 px-4 rounded-2xl border-2 border-gray-700 flex items-center justify-center">
+                                    <span className="text-xs text-gray-400 px-4 ">Next.js</span>
                                 </div>
-                                <div className="align-middle">
-                                    <Image width={36} height={36} src={figmaIcon} alt="Figma Icon" />
-                                    <span className="block text-xs text-gray-400 mt-2">Figma</span>
+                                <div className="bg-zinc-800 p-2 px-4 rounded-2xl border-2 border-gray-700 flex items-center justify-center">
+                                    <span className="text-xs text-gray-400 px-4 ">Figma</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <div className="flex flex-1 group w-full max-w-xl bg-white/5 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10 p-4">
@@ -86,36 +77,26 @@ const Sobre = () => {
             <div className="flex flex-1 w-1/3">
                 <div className="group w-full p-4 bg-white/5 space-y-4 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10">
                     <h1 className="text-3xl font-bold text-white">Experiências</h1>
-                    <div className="flex gap-2">
-                        <div className="flex flex-col w-1/2">
-                            <strong className="font-semi-bold">Desenvolvedor Front-end</strong>
-                            <span className="text-sm text-zinc-500 underline">RentzApp, Mai/2023 - Nov/2023</span>
-                        </div>
-                        <div className="w-1/2">
-                            <p className="text-sm">Atuei como desenvolvedor Front-end, utilizando React e Next.js na criação de componentes, páginas estáticas e dinâmicas, integração com APIs GraphQL para a listagem de produtos, e funcionalidades SEO.
-                            </p>
-                        </div>
-                    </div>
-                    <hr className="border-gray-700 group-hover:border-gray-500" />
-                    <div className="flex gap-2">
-                        <div className="flex flex-col w-1/2">
-                            <strong className="font-semi-bold">Desenvolvedor Full-stack</strong>
-                            <span className="text-sm text-zinc-500 underline">Dunning, Abr/2022 - Nov/2022</span>
-                        </div>
-                        <div className="w-1/2">
-                            <p className="text-sm">Como desenvolvedor Full-stack, desempenhei um papel na manutenção do banco de dados, implementação de melhorias tanto no frontend quanto no backend, e na documentação das APIs.</p>
-                        </div>
-                    </div>
-                    <hr className="border-gray-700 group-hover:border-gray-500" />
-                    <div className="flex gap-2">
-                        <div className="flex flex-col w-1/2">
-                            <strong className="font-semi-bold">Suporte a Sistemas CRM</strong>
-                            <span className="text-sm text-zinc-500 underline">Irsis, Ago/2021 - Abr/2022</span>
-                        </div>
-                        <div className="w-1/2">
-                            <p className="text-sm">Atuei realizando melhorias, manutenções, customizações e oferecendo suporte em um sistema CRM, atendendo às necessidades específicas do cliente.</p>
-                        </div>
-                    </div>
+                    <ol className="relative border-s border-gray-700 group-hover:border-gray-500">
+                        <li className="mb-6 ms-4">
+                            <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
+                            <time className="mb-1 text-sm font-normal leading-none text-gray-500">RentzApp, Mai/2023 - Nov/2023</time>
+                            <h3 className="text-lg font-semibold text-white">Desenvolvedor Front-end</h3>
+                            <p className="mb-4 text-sm font-normal text-gray-400">Atuei utilizando React e Next.js na criação de componentes, páginas estáticas e dinâmicas, integração com APIs GraphQL para a listagem de produtos, e funcionalidades SEO.</p>
+                        </li>
+                        <li className="mb-6 ms-4">
+                            <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
+                            <time className="mb-1 text-sm font-normal leading-none text-gray-500">Dunning, Abr/2022 - Nov/2022</time>
+                            <h3 className="text-lg font-semibold text-white">Desenvolvedor Full-stack</h3>
+                            <p className="text-sm font-normal text-gray-400">Desempenhei um papel na manutenção do banco de dados, implementação de melhorias tanto no frontend quanto no backend, e na documentação das APIs.</p>
+                        </li>
+                        <li className="ms-4">
+                            <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
+                            <time className="mb-1 text-sm font-normal leading-none text-gray-500">Irsis, Ago/2021 - Abr/2022</time>
+                            <h3 className="text-lg font-semibold text-white">Suporte a Sistemas CRM</h3>
+                            <p className="text-sm font-normal text-gray-400">Atuei realizando melhorias, manutenções, customizações e oferecendo suporte em um sistema CRM, atendendo às necessidades específicas do cliente.</p>
+                        </li>
+                    </ol>
                 </div>
             </div>
         </div>
