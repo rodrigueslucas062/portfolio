@@ -4,7 +4,6 @@ const Banner = () => {
     const [clicked, setClicked] = useState(false);
 
     useEffect(() => {
-        // Adiciona a classe 'clicked' assim que o componente é montado
         setClicked(true);
     }, []);
 

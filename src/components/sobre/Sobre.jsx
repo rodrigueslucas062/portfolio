@@ -36,7 +36,6 @@ const Sobre = () => {
                     <div className="py-4 px-16">
                         <div className="flex flex-col">
                             <h1 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">Tecnologias</h1>
-                            {/* TO DO: Melhorar icones */}
                             <div className="flex gap-12 items-center">
                                 <div className="align-middle">
                                     <Image width={36} height={36} src={htmlIcon} alt="HTML Icon" />
@@ -71,7 +70,6 @@ const Sobre = () => {
                 <article className="text-wrap">
                     <p>Estudante de Sistemas de Informação apaixonado por programação e desenvolvimento de software. Atuo como desenvolvedor front-end, em tecnologias como React e Next.js. Comprometido em aprimorar continuamente minhas habilidades, busco constantemente aprender e aplicar conhecimentos para impulsionar minha formação profissional.</p>
                     <hr className="border-gray-700 group-hover:border-gray-500 my-8" />
-                    {/* TO DO: Elaborar texto */}
                     <h1 className="text-2xl font-bold text-white mb-4">Educação</h1>
                     <div className="space-y-4">
                         <div className="flex flex-col">
