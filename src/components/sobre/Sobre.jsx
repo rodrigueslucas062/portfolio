@@ -27,31 +27,6 @@ const Sobre = () => {
                             <span className="text-sm text-gray-400">UX/UI</span>
                         </div>
                     </div>
-                    <div className="px-10 space-y-4 w-full">
-                        <h1 className="mb-4 text-xl font-bold text-white">Idiomas</h1>
-                        <div>
-                            <div className="flex justify-between mb-2">
-                                <span className="text-base font-medium text-white">Português</span>
-                                <span className="text-base font-medium text-white">Nativo</span>
-                            </div>
-                            <div className="flex flex-col border-2 border-gray-700 group-hover:border-gray-500 rounded-full justify-between mb-1 p-1">
-                                <div className="w-full rounded-full h-2.5 bg-purple-950">
-                                    <div className="bg-purple-700 h-2.5 rounded-full w-full"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div className="flex justify-between mb-2">
-                                <span className="text-base font-medium text-white">Inglês</span>
-                                <span className="text-base font-medium text-white">Intermediario</span>
-                            </div>
-                            <div className="flex flex-col border-2 border-gray-700 group-hover:border-gray-500 rounded-full justify-between mb-1 p-1">
-                                <div className="w-full rounded-full h-2.5 bg-purple-950">
-                                    <div className="bg-purple-700 h-2.5 rounded-full w-1/2"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div className="flex flex-1 group w-full max-w-xl bg-white/5 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10 p-4">
