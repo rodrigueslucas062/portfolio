@@ -5,28 +5,36 @@ const Sobre = () => {
     const avatarUrl = 'https://avatars.githubusercontent.com/u/39422637?s=400&u=b6bddbc97edde098ad4d50599d99479aff0cb6d9&v=4';
     return (
         <div className="flex my-10 gap-4">
-            <div className="flex group flex-1 w-1/3">
-                <div className="grid grid-cols-1 md:grid-cols-2 w-full bg-white/5 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10">
-                    <div className="flex flex-col items-center py-10">
-                        <Image className="mb-3 rounded-full shadow-lg border-2 p-1 border-gray-600" src={avatarUrl} alt="Lucas Rodrigues" width={125} height={125} />
-                        <h5 className="mb-1 text-xl font-medium text-white">Lucas Rodrigues</h5>
-                        <span className="text-sm text-gray-400">Desenvolvedor Front-end</span>
-                    </div>
-                    <div className="flex flex-col py-10 px-4 space-y-4">
-                        <h1 className="text-3xl font-bold text-white">Qualificações</h1>
-                        <div className="flex gap-2 items-center">
-                            <GraduationCap />
-                            <span className="text-sm text-gray-400">Sistemas de informação</span>
-                        </div>
-                        <div className="flex gap-2 items-center">
-                            <Briefcase />
-                            <span className="text-sm text-gray-400">Web designer</span>
-                        </div>
-                        <div className="flex gap-2 items-center">
-                            <Briefcase />
-                            <span className="text-sm text-gray-400">UX/UI</span>
+            <div className="group flex-1 w-1/3 bg-white/5 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10">
+                <div className="grid grid-cols-1 md:grid-cols-2 w-full h-2/3 mb-6">
+                    <div>
+                        <div className="flex flex-col items-center pt-10">
+                            <Image className="mb-3 rounded-full shadow-lg border-2 p-1 border-gray-600" src={avatarUrl} alt="Lucas Rodrigues" width={125} height={125} />
+                            <h5 className="mb-1 text-xl font-medium text-white">Lucas Rodrigues</h5>
+                            <span className="text-sm mb-6 text-gray-400">Desenvolvedor Front-end</span>
+                            <button className="border-2 bg-zinc-900 py-2 px-6 rounded-full">Download CV</button>
                         </div>
                     </div>
+                    <div>
+                        <div className="flex flex-col pt-10 px-4 space-y-4">
+                            <h1 className="text-3xl font-bold text-white">Qualificações</h1>
+                            <div className="flex gap-2 items-center">
+                                <GraduationCap />
+                                <span className="text-sm text-gray-400">Sistemas de informação</span>
+                            </div>
+                            <div className="flex gap-2 items-center">
+                                <Briefcase />
+                                <span className="text-sm text-gray-400">Web designer</span>
+                            </div>
+                            <div className="flex gap-2 items-center">
+                                <Briefcase />
+                                <span className="text-sm text-gray-400">UX/UI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="p-4">
+                    <span>colocar algum conteudo </span>
                 </div>
             </div>
             <div className="flex flex-1 group w-full max-w-xl bg-white/5 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10 p-4">
