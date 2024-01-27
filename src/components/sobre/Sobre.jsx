@@ -4,7 +4,7 @@ import Image from "next/image";
 const Sobre = () => {
     const avatarUrl = 'https://avatars.githubusercontent.com/u/39422637?s=400&u=b6bddbc97edde098ad4d50599d99479aff0cb6d9&v=4';
     return (
-        <div className="flex my-10 gap-4">
+        <div className="flex my-10">
             {/* Seção para telas pequenas (celulares) */}
             <div className="md:hidden w-full">
                 <div className="group w-full bg-white/5 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10 p-4">

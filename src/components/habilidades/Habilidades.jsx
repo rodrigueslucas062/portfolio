@@ -76,7 +76,7 @@ const Habilidades = () => {
 
             {/* Seção para telas grandes (desktop) */}
             <div className="hidden md:flex flex-1 gap-4">
-                <div className="flex flex-col w-full max-w-xl bg-white/5 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10 p-4">
+                <div className="flex flex-col w-1/3 bg-white/5 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10 p-4">
                     <h1 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">Tecnologias</h1>
                     <div className="flex flex-col space-y-2">
                         <div className="flex flex-col-5 gap-4 justify-between">
@@ -133,18 +133,15 @@ const Habilidades = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-1 w-1/3">
-                    <div className="flex flex-col flex-1 group w-full max-w-xl bg-white/5 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10 p-4">
-                        <div className="flex flex-col w-full">
-                            <h1>Não sei oque por aqui</h1>
-                            <h1>Escolher paleta de cor alem do cinza</h1>
-                            <h1>Trabalhar responsividade</h1>
-                            <h1>Adicionar conteudo em projetos</h1>
-                            <h1>certificações</h1>
-                            <h1>texto enormemente enorme so pra encher o tamanho da div pra testar uma coisa que não consigo entender pq nao da certo aaaaa</h1>
-                            <h1>texto enormemente enorme so pra encher o tamanho da div pra testar uma coisa que não consigo entender pq nao da certo aaaaa</h1>
-
-                        </div>
+                <div className="flex flex-col w-1/3 bg-white/5 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10 p-4">
+                    <div className="flex flex-col w-full">
+                        <h1>Não sei oque por aqui</h1>
+                        <h1>Escolher paleta de cor alem do cinza</h1>
+                        <h1>Trabalhar responsividade</h1>
+                        <h1>Adicionar conteudo em projetos</h1>
+                        <h1>certificações</h1>
+                        <h1>texto enormemente enorme so pra encher o tamanho da div pra testar uma coisa que não consigo entender pq nao da certo aaaaa</h1>
+                        <h1>texto enormemente enorme so pra encher o tamanho da div pra testar uma coisa que não consigo entender pq nao da certo aaaaa</h1>
                     </div>
                 </div>
             </div>
