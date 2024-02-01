@@ -8,5 +8,11 @@ body {
   @apply p-3;
 }
 
+.tags-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
 //Animação banner
-@import '../styles/animations/saudacoes.scss'
+@import "../styles/animations/saudacoes.scss";
