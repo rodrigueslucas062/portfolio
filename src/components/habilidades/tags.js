@@ -8,6 +8,7 @@ const tags = [
   "React",
   "Next.js",
   "Figma*",
+  "Tailwind",
 ];
 
 const TagsGrid = () => {
