@@ -1,6 +1,27 @@
+import { useEffect, useState } from 'react';
+
 const Navbar = () => {
+    const [isSticky, setIsSticky] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const offset = window.scrollY
+            if (offset > 80) {
+                setIsSticky(true)
+            } else {
+                setIsSticky(false)
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
+
     return (
-        <nav className="flex mb-3 gap-16 justify-center">
+        <nav className={`flex mb-3 gap-16 justify-center ${isSticky ? 'fixed top-0 w-full bg-gray-900' : ''}`}>
             <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                 <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                     <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
@@ -20,7 +41,7 @@ const Navbar = () => {
                 </div>
             </div>
         </nav>
-    )
-}
+    );
+};
 
 export default Navbar;
