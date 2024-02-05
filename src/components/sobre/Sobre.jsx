@@ -75,51 +75,55 @@ const Sobre = () => {
             </div>
 
             <div className="flex gap-4">
-                <div className="hidden md:flex flex-1 w-1/3 bg-white/5 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 w-full h-2/3 mb-6">
-                        <div>
-                            <div className="flex flex-col items-center pt-10">
-                                <Image className="mb-3 rounded-full shadow-lg border-2 p-1 border-azul-claro" src={avatarUrl} alt="Lucas Rodrigues" width={125} height={125} />
-                                <h5 className="mb-1 text-xl font-medium text-white">Lucas Rodrigues</h5>
-                                <span className="text-sm mb-6 text-gray-400">Desenvolvedor Front-end</span>
-                                <button className="border-2 border-azul-claro bg-zinc-900 py-2 px-6 rounded-full">Download CV</button>
+                <div className="hidden md:flex flex-1 w-1/3">
+                    <div className="group w-full p-4 bg-white/5 space-y-2 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10">
+                        <div className="grid grid-cols-1 md:grid-cols-2 w-full h-2/3 mb-6">
+                            <div>
+                                <div className="flex flex-col items-center pt-10">
+                                    <Image className="mb-3 rounded-full shadow-lg border-2 p-1 border-azul-claro" src={avatarUrl} alt="Lucas Rodrigues" width={125} height={125} />
+                                    <h5 className="mb-1 text-xl font-medium text-white">Lucas Rodrigues</h5>
+                                    <span className="text-sm mb-6 text-gray-400">Desenvolvedor Front-end</span>
+                                    <button className="border-2 border-azul-claro bg-zinc-900 py-2 px-6 rounded-full">Download CV</button>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div className="flex flex-col pt-10 px-4 space-y-4">
-                                <h1 className="text-3xl font-bold text-white">Qualificações</h1>
-                                <div className="flex gap-2 items-center">
-                                    <GraduationCap />
-                                    <span className="text-sm text-gray-400">Sistemas de informação</span>
-                                </div>
-                                <div className="flex gap-2 items-center">
-                                    <Briefcase />
-                                    <span className="text-sm text-gray-400">Web designer</span>
-                                </div>
-                                <div className="flex gap-2 items-center">
-                                    <Briefcase />
-                                    <span className="text-sm text-gray-400">UX/UI</span>
+                            <div>
+                                <div className="flex flex-col pt-10 px-4 space-y-4">
+                                    <h1 className="text-3xl font-bold text-white">Qualificações</h1>
+                                    <div className="flex gap-2 items-center">
+                                        <GraduationCap />
+                                        <span className="text-sm text-gray-400">Sistemas de informação</span>
+                                    </div>
+                                    <div className="flex gap-2 items-center">
+                                        <Briefcase />
+                                        <span className="text-sm text-gray-400">Web designer</span>
+                                    </div>
+                                    <div className="flex gap-2 items-center">
+                                        <Briefcase />
+                                        <span className="text-sm text-gray-400">UX/UI</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="hidden md:flex flex-1 group w-full max-w-xl bg-white/5 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10 p-4">
-                    <article className="text-wrap">
-                        <p>Estudante de Sistemas de Informação apaixonado por programação e desenvolvimento de software. Atuo como desenvolvedor front-end, em tecnologias como React e Next.js. Comprometido em aprimorar continuamente minhas habilidades, busco constantemente aprender e aplicar conhecimentos para impulsionar minha formação profissional.</p>
-                        <hr className="border-gray-700 group-hover:border-gray-500 my-8" />
-                        <h1 className="text-2xl font-bold text-white mb-4">Educação</h1>
-                        <div className="space-y-4">
-                            <div className="flex flex-col">
-                                <strong className="font-semi-bold">Bacharel Sistemas de Informação</strong>
-                                <span className="text-sm text-gray-400">Fev/2021 - Em curso, Dez/2024</span>
+                <div className="hidden md:flex flex-1 w-1/3">
+                    <div className="group w-full p-4 bg-white/5 space-y-2 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10">
+                        <article className="text-wrap">
+                            <p>Estudante de Sistemas de Informação apaixonado por programação e desenvolvimento de software. Atuo como desenvolvedor front-end, em tecnologias como React e Next.js. Comprometido em aprimorar continuamente minhas habilidades, busco constantemente aprender e aplicar conhecimentos para impulsionar minha formação profissional.</p>
+                            <hr className="border-gray-700 group-hover:border-gray-500 my-8" />
+                            <h1 className="text-2xl font-bold text-white mb-4">Educação</h1>
+                            <div className="space-y-4">
+                                <div className="flex flex-col">
+                                    <strong className="font-semi-bold">Bacharel Sistemas de Informação</strong>
+                                    <span className="text-sm text-gray-400">Fev/2021 - Em curso, Dez/2024</span>
+                                </div>
+                                <div className="flex flex-col">
+                                    <strong className="font-semi-bold">Colégio Cotemig</strong>
+                                    <span className="text-sm text-gray-400">Fev/2017 - Dez/2019</span>
+                                </div>
                             </div>
-                            <div className="flex flex-col">
-                                <strong className="font-semi-bold">Colégio Cotemig</strong>
-                                <span className="text-sm text-gray-400">Fev/2017 - Dez/2019</span>
-                            </div>
-                        </div>
-                    </article>
+                        </article>
+                    </div>
                 </div>
                 <div className="hidden md:flex flex-1 w-1/3">
                     <div className="group w-full p-4 bg-white/5 space-y-2 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10">
