@@ -5,7 +5,7 @@ const Contato = () => {
     return (
         <footer>
             {/* Seção para telas pequenas (celulares) */}
-            <div className="md:hidden flex flex-col my-4 space-y-4 p-4 justify-around">
+            <div className="md:hidden flex flex-col my-4 space-y-4 justify-around">
                 <div className="flex gap-4 p-4 rounded-2xl bg-white/5 hover:bg-white/10">
                     <Github />
                     <Link href={"https://github.com/rodrigueslucas062"}>Github</Link>
@@ -21,7 +21,7 @@ const Contato = () => {
             </div>
             
             {/* Seção para telas grandes (desktop) */}
-            <div className="hidden md:flex my-4 p-4 justify-around">
+            <div className="hidden md:flex my-4 justify-around">
                 <div className="flex gap-4 p-4 rounded-2xl bg-white/5 hover:bg-white/10">
                     <Github />
                     <Link href={"https://github.com/rodrigueslucas062"}>Github</Link>
