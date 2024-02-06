@@ -13,7 +13,8 @@ const MainContent = () => {
 
             {/* Seção para telas grandes (desktop) */}
             <div className="hidden md:block gap-4">
-                <h2 className="font-bold text-2xl my-10">Projetos</h2>
+                <h2 className="font-bold text-2xl mt-10 mb-4">Projetos</h2>
+                <span>Clique no card para mais informações</span>
                 <div className="m-4">
                     <div className="grid grid-cols-6 gap-4 mt-4">
                         <ProjetosGrid />
