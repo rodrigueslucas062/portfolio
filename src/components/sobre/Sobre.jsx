@@ -1,8 +1,10 @@
-import { Briefcase, GraduationCap } from "lucide-react";
+import { Briefcase, Github, GraduationCap, Linkedin } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Sobre = () => {
     const avatarUrl = 'https://avatars.githubusercontent.com/u/39422637?s=400&u=b6bddbc97edde098ad4d50599d99479aff0cb6d9&v=4';
+    const Curriculo =  "../../../public/LucasRodrigues.pdf"
     return (
         <div className="flex my-10">
             {/* Seção para telas pequenas (celulares) */}
@@ -82,8 +84,16 @@ const Sobre = () => {
                                 <div className="flex flex-col items-center pt-10">
                                     <Image className="mb-3 rounded-full shadow-lg border-2 p-1 border-azul-claro" src={avatarUrl} alt="Lucas Rodrigues" width={125} height={125} />
                                     <h5 className="mb-1 text-xl font-medium text-white">Lucas Rodrigues</h5>
-                                    <span className="text-sm mb-6 text-gray-400">Desenvolvedor Front-end</span>
-                                    <button className="border-2 border-azul-claro bg-zinc-900 py-2 px-6 rounded-full">Download CV</button>
+                                    <span className="text-sm mb-4 text-gray-400">Desenvolvedor Front-end</span>
+                                    <div className="flex gap-4 mb-4">
+                                        <Link href={"https://github.com/rodrigueslucas062"}>
+                                            <Github size={18} />
+                                        </Link>
+                                        <Link href={"https://www.linkedin.com/in/rodrigueslucasdev/"}>
+                                            <Linkedin size={18}/>
+                                        </Link>
+                                    </div>
+                                    <Link href={Curriculo} className="border-2 border-azul-claro bg-zinc-900 py-2 px-6 rounded-full" target="_blank">Download CV</Link>
                                 </div>
                             </div>
                             <div>
