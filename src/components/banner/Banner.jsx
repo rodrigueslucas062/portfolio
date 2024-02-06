@@ -19,9 +19,9 @@ const Banner = () => {
                 </div>
                 <h1 className='strong'></h1>
             </div>
-            <div className="w-1/2">
+            {/* <div className="w-1/2">
                 <h2>Alguma imagem bacana que combine com o site</h2>
-            </div>
+            </div> */}
         </section>
     );
 };
