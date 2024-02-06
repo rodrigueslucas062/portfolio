@@ -13,6 +13,14 @@ const informacoes = [
     titulo: "Portifólio",
     descricao: "Projeto de portifólio",
   },
+  {
+    code: "https://github.com/rodrigueslucas062/Spotify",
+    demo:"https://spotify-interface-nine.vercel.app/",
+    imagemSrc: Curtidas,
+    imagemAlt: "Imagem do projeto",
+    titulo: "Spotify interface",
+    descricao: "Construção da home do Spotify",
+  },
 ];
 
 const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao }) => {
