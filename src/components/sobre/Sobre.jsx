@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const Sobre = () => {
     const avatarUrl = 'https://avatars.githubusercontent.com/u/39422637?s=400&u=b6bddbc97edde098ad4d50599d99479aff0cb6d9&v=4';
-    const Curriculo = "../../../public/LucasRodrigues.pdf"
-    
+    const Curriculo = "/files/LucasRodrigues.pdf"
+
     return (
         <div className="flex my-10">
             {/* Seção para telas pequenas (celulares) */}
@@ -23,7 +23,9 @@ const Sobre = () => {
                                 <Linkedin size={18} />
                             </Link>
                         </div>
-                        <Link href={Curriculo} className="border-2 border-azul-claro bg-zinc-900 py-2 px-6 rounded-full" target="_blank">Download CV</Link>
+                        <a href={Curriculo} target="_blank"
+                            rel="noopener noreferrer"
+                            className="border-2 border-azul-claro bg-zinc-900 py-2 px-6 rounded-full">Download CV</a>
                     </div>
                     <div>
                         <div className="flex flex-col pt-10 px-4 space-y-4">
@@ -102,7 +104,9 @@ const Sobre = () => {
                                             <Linkedin size={18} />
                                         </Link>
                                     </div>
-                                    <Link href={Curriculo} className="border-2 border-azul-claro bg-zinc-900 py-2 px-6 rounded-full" target="_blank">Download CV</Link>
+                                    <a href={Curriculo} target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="border-2 border-azul-claro bg-zinc-900 py-2 px-6 rounded-full">Download CV</a>
                                 </div>
                             </div>
                             <div>
