@@ -107,6 +107,19 @@ const Habilidades = () => {
                                     </Link>
                                 </div>
                             </div>
+                            <div className="bg-zinc-800 py-2 px-6 rounded-2xl border-2 border-azul-claro flex items-center">
+                                <div className="flex flex-col mr-4">
+                                    <strong className="font-semi-bold">NLW Expert trilha de React</strong>
+                                    <span className="text-sm text-gray-400">Rocketseat</span>
+                                </div>
+                                <div>
+                                    <Link href={"https://app.rocketseat.com.br/certificates/5999773a-6058-4671-b2f1-9c8dfc2aa11c"} target="_blank">
+                                        <button className="border-2 border-azul-claro bg-zinc-900 py-1 px-4 rounded-full">
+                                            <p className="text-sm bold">Certificado</p>
+                                        </button>
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
