@@ -29,7 +29,7 @@ const Sobre = () => {
                     </div>
                     <div>
                         <div className="flex flex-col pt-10 px-4 space-y-4">
-                            <h1 className="text-3xl font-bold text-white">Qualificações</h1>
+                            <h1 className="text-xl font-bold text-white">Qualificações</h1>
                             <div className="flex gap-2 items-center">
                                 <GraduationCap />
                                 <span className="text-sm text-gray-400">Sistemas de informação</span>
