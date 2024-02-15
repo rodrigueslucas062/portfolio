@@ -21,7 +21,7 @@ const Navbar = () => {
     }, [])
 
     return (
-        <nav className={`flex mb-3 gap-16 justify-center z-50 ${isSticky ? 'fixed p-4 top-0 w-full bg-zinc-900' : ''}`}>
+        <nav className={`flex mb-3 gap-16 justify-center z-40 ${isSticky ? 'fixed p-4 top-0 w-full bg-zinc-900' : ''}`}>
             <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                 <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                     <ul className="flex flex-col font-medium lg:flex-row lg:space-x-8 lg:mt-0">
