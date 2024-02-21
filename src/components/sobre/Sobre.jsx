@@ -1,6 +1,7 @@
 import { Briefcase, Github, GraduationCap, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Perfil from '../../../public/images/perfil.jpeg'
 
 const Sobre = () => {
     const avatarUrl = 'https://avatars.githubusercontent.com/u/39422637?s=400&u=b6bddbc97edde098ad4d50599d99479aff0cb6d9&v=4';
@@ -93,7 +94,7 @@ const Sobre = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 w-full h-2/3 mb-6">
                             <div>
                                 <div className="flex flex-col items-center pt-10">
-                                    <Image className="mb-3 rounded-full shadow-lg border-2 p-1 border-azul-claro" src={avatarUrl} alt="Lucas Rodrigues" width={125} height={125} />
+                                    <Image className="mb-3 rounded-full shadow-lg border-2 p-1 border-azul-claro" src={Perfil} alt="Lucas Rodrigues" width={125} height={125} />
                                     <h5 className="mb-1 text-xl font-medium text-white">Lucas Rodrigues</h5>
                                     <span className="text-sm mb-4 text-gray-400">Desenvolvedor Front-end</span>
                                     <div className="flex gap-4 mb-4">
