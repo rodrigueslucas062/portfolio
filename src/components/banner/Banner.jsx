@@ -9,7 +9,7 @@ const Banner = () => {
 
     return (
         <section className="flex gap-4 my-18">
-            <div className="w-1/2">
+            <div className="w-1/2 mt-4">
                 <div id="text-drop" className={clicked ? 'clicked flex' : ''}>
                     <div className="a">A</div>
                     <div className="l">l</div>

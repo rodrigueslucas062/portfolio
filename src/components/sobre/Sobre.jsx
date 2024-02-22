@@ -4,7 +4,6 @@ import Link from "next/link";
 import Perfil from '../../../public/images/perfil.jpeg'
 
 const Sobre = () => {
-    const avatarUrl = 'https://avatars.githubusercontent.com/u/39422637?s=400&u=b6bddbc97edde098ad4d50599d99479aff0cb6d9&v=4';
     const Curriculo = "/files/LucasRodrigues.pdf"
 
     return (
@@ -13,7 +12,7 @@ const Sobre = () => {
             <div className="md:hidden w-full">
                 <div className="group w-full bg-white/5 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10 p-4">
                     <div className="flex flex-col items-center pt-10">
-                        <Image className="mb-3 rounded-full shadow-lg border-2 p-1 border-azul-claro" src={avatarUrl} alt="Lucas Rodrigues" width={125} height={125} />
+                        <Image className="mb-3 rounded-full shadow-lg border-2 p-1 border-azul-claro" src={Perfil} alt="Lucas Rodrigues" width={125} height={125} />
                         <h5 className="mb-1 text-xl font-medium text-white">Lucas Rodrigues</h5>
                         <span className="text-sm mb-6 text-gray-400">Desenvolvedor Front-end</span>
                         <div className="flex gap-4 mb-4">
