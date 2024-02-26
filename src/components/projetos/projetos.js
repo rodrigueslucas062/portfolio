@@ -27,6 +27,26 @@ const informacoes = [
     descricao_modal: "Descrição do projeto Spotify interface",
     tecnologias: ["React", "Next.js", "CSS", "HTML", "JavaScript"],
   },
+  {
+    code: "https://github.com/rodrigueslucas062/Rocketseat",
+    demo: "https://spotify-interface-nine.vercel.app/",
+    imagemSrc: Curtidas,
+    imagemAlt: "Imagem do projeto",
+    titulo: "Bloco de anotações",
+    descricao: "Um projeto de anotações criadas por voz",
+    descricao_modal: "Descrição do projeto Bloco de anotações",
+    tecnologias: ["Next.js", "CSS", "HTML", "JavaScript", "Tailwind", "SpeechRecognitionAPI"],
+  },
+  {
+    code: "https://github.com/rodrigueslucas062/jva-energia",
+    demo: "https://jva-energia.vercel.app/",
+    imagemSrc: Curtidas,
+    imagemAlt: "Imagem do projeto",
+    titulo: "JVA Energia",
+    descricao: "Site JVA energia",
+    descricao_modal: "Descrição do site JVA Energia",
+    tecnologias: ["Next.js", "JavaScript", "Tailwind"],
+  },
 ];
 
 const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descricao_modal, tecnologias }) => {
