@@ -52,8 +52,8 @@ const informacoes = [
 const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descricao_modal, tecnologias }) => {
   return (
     <Dialog.Root>
-      <Dialog.Trigger className="flex flex-1">
-        <div className="flex bg-zinc-50/20 backdrop-blur-sm p-3 text-left rounded-md gap-2 border-2 border-azul-claro">
+      <Dialog.Trigger>
+        <div className="flex bg-zinc-50/20 backdrop-blur-sm p-3 text-left rounded-md gap-2 border-2 border-azul-claro w-full">
           <Image src={imagemSrc} alt={imagemAlt} max-width={100} height={100} className="rounded-md" />
           <div className="flex flex-col space-y-3">
             <strong className="font-semi-bold">{titulo}</strong>
