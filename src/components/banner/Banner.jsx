@@ -1,29 +1,116 @@
 import React, { useEffect, useState } from 'react';
+import TrackVisibility from 'react-on-screen';
+import headerImg from "../../../public/images/header-img.svg"
+import Perfil from '../../../public/images/perfil.jpeg'
+import Image from 'next/image';
+import { Briefcase, GraduationCap, Linkedin, Github } from 'lucide-react';
+import Link from 'next/link';
 
 const Banner = () => {
-    const [clicked, setClicked] = useState(false);
+    const Curriculo = "/files/LucasRodrigues.pdf"
+    const [loopNum, setLoopNum] = useState(0)
+    const [isDeleting, setIsDeleting] = useState(false)
+    const [text, setText] = useState('')
+    const [delta, setDelta] = useState(300 - Math.random() * 100)
+    const [index, setIndex] = useState(1)
+    const toRotate = ["Desenvolvedor Front-end", "Web Designer", "UI/UX Designer"]
+    const period = 2000
 
     useEffect(() => {
-        setClicked(true);
-    }, []);
+        let ticker = setInterval(() => {
+            tick()
+        }, delta)
+
+        return () => { clearInterval(ticker) }
+    }, [text])
+
+    const tick = () => {
+        let i = loopNum % toRotate.length
+        let fullText = toRotate[i]
+        let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1)
+
+        setText(updatedText)
+
+        if (isDeleting) {
+            setDelta(prevDelta => prevDelta / 2)
+        }
+
+        if (!isDeleting && updatedText === fullText) {
+            setIsDeleting(true)
+            setIndex(prevIndex => prevIndex - 1)
+            setDelta(period)
+        } else if (isDeleting && updatedText === '') {
+            setIsDeleting(false)
+            setLoopNum(loopNum + 1)
+            setIndex(1)
+            setDelta(500)
+        } else {
+            setIndex(prevIndex => prevIndex + 1)
+        }
+    }
 
     return (
-        <section className="flex gap-4 my-18">
-            <div className="w-1/2 mt-4">
-                <div id="text-drop" className={clicked ? 'clicked flex' : ''}>
-                    <div className="a">A</div>
-                    <div className="l">l</div>
-                    <div className="o">o</div>
-                    <div className="u">u</div>
-                    <div className="smile">:)</div>
-                </div>
-                <h1 className='strong'></h1>
+        <section className="py-44 bg-center-top bg-cover bg-no-repeat banner" id="home">
+            <div className="justify-center">
+                <TrackVisibility>
+                    {({ isVisible }) =>
+                        <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                            <div className='px-4 md:px-10 mb-8'>
+                                <h2 className='font-bold text-6xl mb-3'>{`Alou, eu sou o Lucas`} </h2>
+                                <h1 className='font-semibold text-4xl mb-4'><span className="txt-rotate" dataPeriod="1000" data-rotate='["Desenvolvedor Front-end", "Web Designer", "UI/UX Designer"]'><span className="wrap">{text}</span></span></h1>
+                                <p className='md:w-2/3 font-medium text-xl'>Estudante de Sistemas de Informação, atuo como desenvolvedor front-end, em tecnologias como React e Next.js, busco constantemente aprender e aplicar conhecimentos para impulsionar minha formação profissional. </p>
+                            </div>
+                            <div className="flex flex-1 w-full md:w-1/3 px-4 md:px-10">
+                                <div className="group w-full p-4 bg-white/5 space-y-2 rounded-xl shadow border-2 border-gray-700 backdrop-blur-sm">
+                                    <div className="md:grid grid-cols-2 h-2/3 mb-6">
+                                        <div className="flex flex-col items-center pt-10">
+                                            <Image className="mb-3 rounded-full shadow-lg border-2 p-1 border-azul-claro" src={Perfil} alt="Lucas Rodrigues" width={125} height={125} />
+                                            <h5 className="mb-1 text-xl font-medium text-white">Lucas Rodrigues</h5>
+                                            <span className="text-sm mb-4 text-gray-400">Desenvolvedor Front-end</span>
+                                            <div className="flex gap-4 mb-4">
+                                                <Link href={"https://github.com/rodrigueslucas062"}>
+                                                    <Github size={18} />
+                                                </Link>
+                                                <Link href={"https://www.linkedin.com/in/rodrigueslucasdev/"}>
+                                                    <Linkedin size={18} />
+                                                </Link>
+                                            </div>
+                                            <a href={Curriculo} target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="border-2 border-azul-claro bg-zinc-900 py-2 px-6 rounded-full">Download CV</a>
+                                        </div>
+                                        <div className="flex flex-col pt-10 px-4 space-y-4">
+                                            <h5 className="text-3xl font-bold text-white">Qualificações</h5>
+                                            <div className="flex gap-2 items-center">
+                                                <GraduationCap />
+                                                <span className="text-sm text-gray-400">Sistemas de informação</span>
+                                            </div>
+                                            <div className="flex gap-2 items-center">
+                                                <Briefcase />
+                                                <span className="text-sm text-gray-400">Web designer</span>
+                                            </div>
+                                            <div className="flex gap-2 items-center">
+                                                <Briefcase />
+                                                <span className="text-sm text-gray-400">UX/UI</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>}
+                </TrackVisibility>
+                <TrackVisibility>
+                    {({ isVisible }) => (
+                        <div className="invisible md:visible absolute top-8 right-4 mt-4 mr-4">
+                            <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                                <Image src={headerImg} alt="Header Img" />
+                            </div>
+                        </div>
+                    )}
+                </TrackVisibility>
             </div>
-            {/* <div className="w-1/2">
-                <h2>Alguma imagem bacana que combine com o site</h2>
-            </div> */}
         </section>
-    );
-};
+    )
+}
 
 export default Banner;
