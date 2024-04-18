@@ -57,26 +57,22 @@ const Habilidades = () => {
                     <div className="group w-full p-4 bg-white/5 space-y-2 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10">
                         <div className="w-full">
                             <h1 className="mb-4 text-xl font-bold text-white">Idiomas</h1>
-                            <div>
-                                <div className="flex justify-between mb-2">
-                                    <span className="text-base font-medium text-white">Português</span>
-                                    <span className="text-base font-medium text-white">Nativo</span>
-                                </div>
-                                <div className="flex flex-col border-2 border-azul-claro rounded-full justify-between mb-1 p-1">
-                                    <div className="w-full rounded-full h-2.5 bg-azul-petroleo">
-                                        <div className="bg-azul-claro h-2.5 rounded-full w-full"></div>
-                                    </div>
+                            <div className="flex justify-between mb-2">
+                                <span className="text-base font-medium text-white">Português</span>
+                                <span className="text-base font-medium text-white">Nativo</span>
+                            </div>
+                            <div className="flex flex-col border-2 border-azul-claro rounded-full justify-between mb-1 p-1">
+                                <div className="w-full rounded-full h-2.5 bg-azul-petroleo">
+                                    <div className="bg-azul-claro h-2.5 rounded-full w-full"></div>
                                 </div>
                             </div>
-                            <div>
-                                <div className="flex justify-between mb-2">
-                                    <span className="text-base font-medium text-white">Inglês</span>
-                                    <span className="text-base font-medium text-white">Intermediario</span>
-                                </div>
-                                <div className="flex flex-col border-2 border-azul-claro rounded-full justify-between mb-1 p-1">
-                                    <div className="w-full rounded-full h-2.5 bg-azul-petroleo">
-                                        <div className="bg-azul-claro h-2.5 rounded-full w-1/2"></div>
-                                    </div>
+                            <div className="flex justify-between mb-2">
+                                <span className="text-base font-medium text-white">Inglês</span>
+                                <span className="text-base font-medium text-white">Intermediario</span>
+                            </div>
+                            <div className="flex flex-col border-2 border-azul-claro rounded-full justify-between mb-1 p-1">
+                                <div className="w-full rounded-full h-2.5 bg-azul-petroleo">
+                                    <div className="bg-azul-claro h-2.5 rounded-full w-1/2"></div>
                                 </div>
                             </div>
                         </div>

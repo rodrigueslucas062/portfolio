@@ -2,22 +2,18 @@ const tags = [
   "Next.js",
   "React",
   "Figma*",
-  "Web Design*",
-  "HTML",
-  "JavaScript",
   "UX/UI*",
+  "Web Design*",
   "User Experience*",
-  "CSS",
   "Tailwind",
 ];
 
 const TagsGrid = () => {
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="flex flex-wrap gap-2">
       {tags.map((tag, index) => (
-        <div
-          key={index}
-          className="bg-zinc-800 p-2 px-3 rounded-2xl border-2 border-azul-claro flex items-center justify-center">
+        <div key={index}
+          className="flex bg-zinc-800 p-2 rounded-md border-2 border-azul-claro items-center justify-center" >
           <span className="text-xs text-gray-400 px-4">{tag}</span>
         </div>
       ))}

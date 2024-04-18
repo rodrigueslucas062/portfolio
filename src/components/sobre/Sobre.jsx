@@ -1,6 +1,6 @@
 const Sobre = () => {
     return (
-        <div className="flex gap-4">
+        <div className="flex gap-4 bg-zinc-800">
             <div className="hidden md:flex flex-1 w-1/3">
                 <div className="group w-full p-4 bg-white/5 space-y-2 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10">
                     <article className="text-wrap">
