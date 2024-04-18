@@ -1,4 +1,3 @@
-import Link from "next/link";
 import TagsGrid from "./tags";
 import CertificadosGrid from "./certificados";
 
