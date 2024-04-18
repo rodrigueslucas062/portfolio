@@ -55,12 +55,12 @@ const Banner = () => {
                 <TrackVisibility>
                     {({ isVisible }) =>
                         <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                            <div className='px-4 md:px-10 mb-8'>
-                                <h2 className='font-bold text-6xl mb-3'>{`Alou, eu sou o Lucas`} </h2>
-                                <h1 className='font-semibold text-4xl mb-4'><span className="txt-rotate" dataPeriod="1000" data-rotate='["Desenvolvedor Front-end", "Web Designer", "UI/UX Designer"]'><span className="wrap">{text}</span></span></h1>
-                                <p className='md:w-2/3 font-medium text-xl'>Estudante de Sistemas de Informação, atuo como desenvolvedor front-end, em tecnologias como React e Next.js, busco constantemente aprender e aplicar conhecimentos para impulsionar minha formação profissional. </p>
+                            <div className='px-4 md:px-10 mb-8 max-2xl:space-y-8'>
+                                <h2 className='font-bold text-3xl 2xl:text-6xl mb-3'>{`Alou, eu sou o Lucas`} </h2>
+                                <h1 className='font-semibold text-2xl 2xl:text-4xl mb-4'><span className="txt-rotate" dataPeriod="1000" data-rotate='["Desenvolvedor Front-end", "Web Designer", "UI/UX Designer"]'><span className="wrap">{text}</span></span></h1>
+                                <p className='md:w-2/3 font-medium md:text-md 2xl:text-xl'>Estudante de Sistemas de Informação, atuo como desenvolvedor front-end, em tecnologias como React e Next.js, busco constantemente aprender e aplicar conhecimentos para impulsionar minha formação profissional. </p>
                             </div>
-                            <div className="flex flex-1 w-full md:w-1/3 px-4 md:px-10">
+                            <div className="flex flex-1 w-full xl:w-2/4 2xl:w-1/3 max-2xl:pt-8 px-4 md:px-10">
                                 <div className="group w-full p-4 bg-white/5 space-y-2 rounded-xl shadow border-2 border-gray-700 backdrop-blur-sm">
                                     <div className="md:grid grid-cols-2 h-2/3 mb-6">
                                         <div className="flex flex-col items-center pt-10">
@@ -101,7 +101,7 @@ const Banner = () => {
                 </TrackVisibility>
                 <TrackVisibility>
                     {({ isVisible }) => (
-                        <div className="invisible md:visible absolute top-8 right-4 mt-4 mr-4">
+                        <div className="invisible md:visible max-2xl:w-1/4 max-2xl:h-1/4 absolute top-8 right-4 mt-4 mr-4">
                             <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
                                 <Image src={headerImg} alt="Header Img" />
                             </div>
