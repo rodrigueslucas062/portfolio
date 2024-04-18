@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <div className="h-screen flex flex-col">
       <Navbar />
+      <Banner />
       <div className="flex flex-col flex-1">
-        <main className="bg-zinc-800 rounded-lg h-full p-8 mb-4">
-          <Banner />
+        <main className="bg-zinc-800 rounded-b-lg h-full p-4 md:p-8 mb-4">
           <Sobre />
           <Habilidades />
           <MainContent />
