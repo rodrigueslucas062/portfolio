@@ -50,7 +50,7 @@ const Banner = () => {
     }
 
     return (
-        <section className="py-44 bg-center-top bg-cover bg-no-repeat banner" id="home">
+        <section className="py-32 lg:py-44 bg-center-top bg-cover bg-no-repeat banner" id="home">
             <div className="justify-center">
                 <TrackVisibility>
                     {({ isVisible }) =>
@@ -68,29 +68,33 @@ const Banner = () => {
                                             <h5 className="mb-1 text-xl font-medium text-white">Lucas Rodrigues</h5>
                                             <span className="text-sm mb-4 text-gray-400">Desenvolvedor Front-end</span>
                                             <div className="flex gap-4 mb-4">
-                                                <Link href={"https://github.com/rodrigueslucas062"}>
+                                                <Link href={"https://github.com/rodrigueslucas062"} className='hover:bg-white hover:text-zinc-900 p-1 rounded-full'>
                                                     <Github size={18} />
                                                 </Link>
-                                                <Link href={"https://www.linkedin.com/in/rodrigueslucasdev/"}>
+                                                <Link href={"https://www.linkedin.com/in/rodrigueslucasdev/"} className='hover:bg-azul-claro p-1 rounded-md'>
                                                     <Linkedin size={18} />
                                                 </Link>
                                             </div>
                                             <a href={Curriculo} target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="border-2 border-azul-claro bg-zinc-900 py-2 px-6 rounded-full">Download CV</a>
+                                                className="border-2 border-azul-claro bg-zinc-900 py-2 px-6 rounded-lg">Download CV</a>
                                         </div>
                                         <div className="flex flex-col pt-10 px-4 space-y-4">
                                             <h5 className="text-3xl font-bold text-white">Qualificações</h5>
+                                            <div className="flex gap-2 items-center">
+                                                <Briefcase />
+                                                <span className="text-sm text-gray-400">Desenvolvedor Front-end</span>
+                                            </div>
                                             <div className="flex gap-2 items-center">
                                                 <GraduationCap />
                                                 <span className="text-sm text-gray-400">Sistemas de informação</span>
                                             </div>
                                             <div className="flex gap-2 items-center">
-                                                <Briefcase />
+                                                <GraduationCap />
                                                 <span className="text-sm text-gray-400">Web designer</span>
                                             </div>
                                             <div className="flex gap-2 items-center">
-                                                <Briefcase />
+                                                <GraduationCap />
                                                 <span className="text-sm text-gray-400">UX/UI</span>
                                             </div>
                                         </div>
