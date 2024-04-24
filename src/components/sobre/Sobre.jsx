@@ -1,7 +1,7 @@
 const Sobre = () => {
     return (
-        <div className="flex gap-4 bg-zinc-800">
-            <div className="hidden md:flex flex-1 w-1/3">
+        <section id="sobre" className="flex max-lg:flex-col gap-4 bg-zinc-800">
+            <div className="flex flex-1">
                 <div className="group w-full p-4 bg-white/5 space-y-2 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10">
                     <article className="text-wrap">
                         <h1 className="text-2xl font-bold text-white mb-4">Educação</h1>
@@ -20,7 +20,7 @@ const Sobre = () => {
                     </article>
                 </div>
             </div>
-            <div className="hidden md:flex flex-1 w-1/3">
+            <div className="flex flex-1">
                 <div className="group w-full p-4 bg-white/5 space-y-2 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10">
                     <h1 className="text-3xl font-bold text-white">Experiências</h1>
                     <ol className="relative border-s border-gray-700 group-hover:border-gray-500">
@@ -45,7 +45,7 @@ const Sobre = () => {
                     </ol>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

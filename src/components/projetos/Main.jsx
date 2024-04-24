@@ -31,7 +31,7 @@ const MainContent = () => {
 
     return (
         <>
-            <section className="flex-1 py-4 space-x-5 px-4 2xl:px-0">
+            <section id="projetos" className="flex-1 py-4 space-x-5 px-4 2xl:px-0">
                 <div className="md:hidden gap-2">
                     <h2 className="font-bold text-2xl my-5">Projetos</h2>
                     <div className="flex flex-col gap-4 mt-4">

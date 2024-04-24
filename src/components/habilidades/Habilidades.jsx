@@ -3,8 +3,7 @@ import CertificadosGrid from "./certificados";
 
 const Habilidades = () => {
     return (
-        <div className="flex flex-col md:flex-row my-10 gap-4">
-            {/* Seção para telas pequenas (celulares) */}
+        <section id="habilidades" className="flex flex-col md:flex-row my-10 gap-4">
             <div className="md:hidden flex flex-col gap-4 flex-1">
                 <div className="flex flex-col w-full max-w-xl bg-white/5 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10 p-4">
                     <h1 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">Tecnologias</h1>
@@ -45,7 +44,6 @@ const Habilidades = () => {
                 </div>
             </div>
 
-            {/* Seção para telas grandes (desktop) */}
             <div className="hidden md:flex flex-1 gap-4">
                 <div className="hidden md:flex flex-1 w-1/3">
                     <div className="group w-full p-4 bg-white/5 space-y-2 rounded-xl shadow border-2 border-gray-700 hover:bg-white/10">
@@ -87,7 +85,7 @@ const Habilidades = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
