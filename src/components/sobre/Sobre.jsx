@@ -8,13 +8,13 @@ const Sobre = () => {
                         <ol className="relative border-s border-gray-700 group-hover:border-gray-500">
                             <li className="mb-4 ms-4">
                                 <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
-                                <h3 className="text-lg font-semibold text-white">Bacharel Sistemas de Informação</h3>
-                                <time className="mb-1 text-sm font-normal leading-none text-gray-400">Fev/2021 - Dex/2024</time>
+                                <h3 className="text-lg font-semibold text-white">Bacharel em Sistemas de Informação</h3>
+                                <time className="mb-1 text-sm font-normal leading-none text-gray-400">Fev/2021 - Dez/2024</time>
                             </li>
                             <li className="mb-4 ms-4">
                                 <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
                                 <h3 className="text-lg font-semibold text-white">Colégio Cotemig</h3>
-                                <time className="mb-1 text-sm font-normal leading-none text-gray-400">Fev/2017 - Nov/2019</time>
+                                <time className="mb-1 text-sm font-normal leading-none text-gray-400">Fev/2017 - Dez/2019</time>
                             </li>
                         </ol>
                     </article>
@@ -26,7 +26,7 @@ const Sobre = () => {
                     <ol className="relative border-s border-gray-700 group-hover:border-gray-500">
                         <li className="mb-4 ms-4">
                             <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
-                            <time className="mb-1 text-sm font-normal leading-none text-gray-400">RentzApp, Mai/2023 - Nov/2023</time>
+                            <time className="mb-1 text-sm font-normal leading-none text-gray-400">RentzApp, Mai/2023 - Dez/2023</time>
                             <h3 className="text-lg font-semibold text-white">Desenvolvedor Front-end</h3>
                             <p className="mb-4 text-sm font-normal text-gray-400">Atuei utilizando React e Next.js na criação de componentes, páginas estáticas e dinâmicas, integração com APIs GraphQL para a listagem de produtos, e funcionalidades SEO.</p>
                         </li>
@@ -34,13 +34,13 @@ const Sobre = () => {
                             <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
                             <time className="mb-1 text-sm font-normal leading-none text-gray-400">Dunning, Abr/2022 - Nov/2022</time>
                             <h3 className="text-lg font-semibold text-white">Desenvolvedor Full-stack</h3>
-                            <p className="text-sm font-normal text-gray-400">Desempenhei um papel na manutenção do banco de dados, implementação de melhorias tanto no frontend quanto no backend, e na documentação das APIs.</p>
+                            <p className="text-sm font-normal text-gray-400">Desempenhei um papel na manutenção do banco de dados, implementação de melhorias com Java e Html, e na documentação e teste das APIs internas.</p>
                         </li>
                         <li className="ms-4">
                             <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
                             <time className="mb-1 text-sm font-normal leading-none text-gray-400">Irsis, Ago/2021 - Abr/2022</time>
                             <h3 className="text-lg font-semibold text-white">Suporte a Sistemas CRM</h3>
-                            <p className="text-sm font-normal text-gray-400">Atuei realizando melhorias, manutenções, customizações e oferecendo suporte em um sistema CRM, atendendo às necessidades específicas do cliente.</p>
+                            <p className="text-sm font-normal text-gray-400">Atuei realizando melhorias, manutenções, customizações e oferecendo suporte no sistema CRM Dynamics 365, atendendo às necessidades específicas de cada cliente.</p>
                         </li>
                     </ol>
                 </div>
