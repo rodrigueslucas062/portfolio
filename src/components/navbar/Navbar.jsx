@@ -1,32 +1,55 @@
 import { useRouter } from 'next/router';
 import * as Dialog from "@radix-ui/react-dialog";
-import Image from "next/image"
-import Perfil from '../../../public/images/perfil.jpeg'
 import { FlaskConical, MoreHorizontal, X } from "lucide-react"
+import { navLinks } from './NavLinks';
+import { useEffect, useState } from 'react';
+
+const sectionNames = {
+    sobre: "Sobre",
+    habilidades: "Habilidades",
+    projetos: "Projetos",
+    contato: "Contato",
+}
 
 const Navbar = () => {
-    const router = useRouter();
+    const router = useRouter()
+    const [currentSection, setCurrentSection] = useState('')
 
-    const isNotePadRoute = router.pathname === '/notepad';
-    const notebookText = isNotePadRoute ? 'Anotações' : 'Tarefas Gerais';
+    useEffect(() => {
+        function handleScroll() {
+            const sections = Array.from(document.querySelectorAll('section'))
+            const scrollPosition = window.scrollY
+            let closestSectionId = ''
+
+            sections.forEach((section) => {
+                if (section.offsetTop <= scrollPosition + 100) {
+                    closestSectionId = section.id
+                }
+            })
+
+            setCurrentSection(sectionNames[closestSectionId] || "Portfólio")
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        handleScroll()
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
 
     return (
         <nav className="fixed flex top-8 w-full justify-center z-10 px-4 2xl:px-0">
-            <div className="flex w-full lg:w-2/5 border-2 border-zinc-900 bg-gray-50/70 items-center justify-between px-4 py-2 rounded-full backdrop-blur-sm transition-visible duration-500 ease-in-out">
-                <Image className="rounded-xl border-2 border-zinc-900" src={Perfil} alt="Lucas Rodrigues" width={50} height={50} />
+            <div className="flex w-full lg:w-2/5 border-2 border-zinc-900 bg-gray-50/70 items-center lg:justify-center px-4 py-2 rounded-full backdrop-blur-sm transition-visible duration-500 ease-in-out">
+                <div className='lg:invisible max-md:mx-auto text-zinc-900 text-lg font-semibold p-2'>
+                    <span>{currentSection}</span>
+                </div>
                 <ul className="max-md:hidden flex font-medium rounded-lg">
-                    <li>
-                        <a href="#" className="bbg-zinc-200 hover:bg-zinc-400 text-zinc-900 hover:text-zinc-200 2xl:px-6 px-3 p-2 rounded-xl flex gap-2">Sobre</a>
-                    </li>
-                    <li>
-                        <a href="#" className="bbg-zinc-200 hover:bg-zinc-400 text-zinc-900 hover:text-zinc-200 2xl:px-6 px-3 p-2 rounded-xl flex gap-2">Habilidades</a>
-                    </li>
-                    <li>
-                        <a href="#" className="bbg-zinc-200 hover:bg-zinc-400 text-zinc-900 hover:text-zinc-200 2xl:px-6 px-3 p-2 rounded-xl flex gap-2">Projetos</a>
-                    </li>
-                    <li>
-                        <a href="#" className="bbg-zinc-200 hover:bg-zinc-400 text-zinc-900 hover:text-zinc-200 2xl:px-6 px-3 p-2 rounded-xl flex gap-2">Contato</a>
-                    </li>
+                    {navLinks.map((item) => (
+                        <li key={item.label}>
+                            <a href={item.href} className="hover:bg-zinc-400 text-zinc-900 hover:text-zinc-200 2xl:px-6 px-3 p-2 rounded-xl flex gap-2">{item.label}</a>
+                        </li>
+                    ))}
                 </ul>
                 <Dialog.Root>
                     <Dialog.Trigger className="lg:invisible bg-zinc-200 hover:bg-zinc-400 text-zinc-900 hover:text-zinc-200 p-2 rounded-full">
@@ -35,28 +58,18 @@ const Navbar = () => {
 
                     <Dialog.Portal>
                         <Dialog.DialogOverlay className="inset-0 fixed bg-black/70">
-                            <Dialog.DialogContent className="fixed z-10 inset-0 md:inset-auto max-md:top-[45%] lg:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[640px] w-full md:h-[65vh] bg-gray-200 max-md:rounded-t-3xl lg:rounded-3xl flex flex-col outline-none overflow-hidden">
+                            <Dialog.DialogContent className="fixed z-10 inset-0 md:inset-auto max-md:top-[55%] lg:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[640px] w-full md:h-[65vh] bg-gray-200 max-md:rounded-t-3xl lg:rounded-3xl flex flex-col outline-none overflow-hidden">
                                 <Dialog.Close className="hover:bg-gray-300 p-2 rounded-full absolute top-2 right-2 text-zinc-800">
                                     <X className="size-5" />
                                 </Dialog.Close>
                                 <div className="flex flex-col items-center justify-center gap-3 px-2 lg:px-4 pt-1.5">
-                                    <div className="rounded-lg mt-4 lg:mt-8 justify-center inline-block w-3/4 lg:w-3/5 relative text-zinc-900">
-                                        <div className='flex justify-center'>
-                                            <span className="font-semibold text-zinc-900 text-lg">{router.pathname === '/dailytasks' ? 'Tarefas Diárias' : notebookText}</span>
-                                        </div>
-                                        <ul className="flex flex-col p-4 md:p-0 font-medium max-md:space-y-2 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:border-0">
-                                            <li>
-                                                <a href="#" className="bg-white/5 px-6 p-3 rounded-xl flex flex-col gap-2 hover:bg-white/10">Sobre</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" className="bg-white/5 px-6 p-3 rounded-xl flex flex-col gap-2 hover:bg-white/10">Habilidades</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" className="bg-white/5 px-6 p-3 rounded-xl flex flex-col gap-2 hover:bg-white/10">Projetos</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" className="bg-white/5 px-6 p-3 rounded-xl flex flex-col gap-2 hover:bg-white/10">Contato</a>
-                                            </li>
+                                    <div className="rounded-lg mt-4 lg:mt-8 inline-block w-3/4 lg:w-3/5 relative text-zinc-900">
+                                        <ul className="flex flex-col p-4 items-center font-medium max-md:space-y-2 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:border-0">
+                                            {navLinks.map((item) => (
+                                                <li key={item.label}>
+                                                    <a href={item.href} className="bg-white/5 px-6 p-3 rounded-xl flex flex-col gap-2 hover:bg-white/10">{item.label}</a>
+                                                </li>
+                                            ))}
                                         </ul>
                                     </div>
                                 </div>
