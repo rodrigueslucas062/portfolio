@@ -58,22 +58,18 @@ const Navbar = () => {
 
                     <Dialog.Portal>
                         <Dialog.DialogOverlay className="inset-0 fixed bg-black/70">
-                            <Dialog.DialogContent className="fixed z-10 inset-0 md:inset-auto max-md:top-[55%] lg:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[640px] w-full md:h-[65vh] bg-gray-200 max-md:rounded-t-3xl lg:rounded-3xl flex flex-col outline-none overflow-hidden">
-                                <Dialog.Close className="hover:bg-gray-300 p-2 rounded-full absolute top-2 right-2 text-zinc-800">
+                            <Dialog.DialogContent className="fixed z-10 inset-0 md:inset-auto max-md:top-[55%] lg:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[640px] w-full md:h-[65vh] bg-zinc-800 max-md:rounded-t-3xl lg:rounded-3xl flex flex-col outline-none overflow-hidden">
+                                <Dialog.Close className="hover:bg-gray-300 p-2 rounded-full absolute top-2 right-2 text-gray-200 hover:text-zinc-800">
                                     <X className="size-5" />
                                 </Dialog.Close>
-                                <div className="flex flex-col items-center justify-center gap-3 px-2 lg:px-4 pt-1.5">
-                                    <div className="rounded-lg mt-4 lg:mt-8 inline-block w-3/4 lg:w-3/5 relative text-zinc-900">
-                                        <ul className="flex flex-col p-4 items-center font-medium max-md:space-y-2 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:border-0">
-                                            {navLinks.map((item) => (
-                                                <li key={item.label}>
-                                                    <a href={item.href} className="bg-white/5 px-6 p-3 rounded-xl flex flex-col gap-2 hover:bg-white/10">{item.label}</a>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="flex text-zinc-800 font-semibold mt-auto pb-2 w-3/4 lg:w-3/5 mx-auto flex-col space-y-2 bottom-0">
+                                <ul className="flex flex-col mt-8 py-6 px-8 font-medium space-y-6 rounded-lg">
+                                    {navLinks.map((item) => (
+                                        <li key={item.label}>
+                                            <a href={item.href} className="bg-white/5 text-center px-6 p-3 rounded-xl flex flex-col gap-2 hover:bg-white/10">{item.label}</a>
+                                        </li>
+                                    ))}
+                                </ul>
+                                <div className="flex marker:text-gray-200 font-semibold mt-auto pb-2 w-3/4 lg:w-3/5 mx-auto flex-col space-y-2 bottom-0">
                                     <div className="flex justify-center">
                                         <span className="text-sm">Made for </span>
                                         <FlaskConical className="text-lime-500" />{" "}
