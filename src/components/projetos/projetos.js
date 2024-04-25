@@ -1,73 +1,90 @@
 import React from "react";
 import Image from "next/image";
-import Curtidas from "../../../public/images/curtidas.jpg";
+import Spotify from "../../../public/images/Spotify.png";
+import Todo from "../../../public/images/Todo.png";
+import Jva from "../../../public/images/Jva.png";
 import { ExternalLink, Github, X } from "lucide-react";
 import Link from "next/link";
 import * as Dialog from "@radix-ui/react-dialog";
-import { DialogContent } from "@radix-ui/themes";
 
 const informacoes = [
   {
-    code: "https://github.com/rodrigueslucas062/portfolio",
-    demo: "https://lucas-rodrigues.vercel.app/",
-    imagemSrc: Curtidas,
-    imagemAlt: "Imagem de portifolio",
-    titulo: "Portifólio",
-    descricao: "Projeto de portifólio",
-    descricao_modal: "Criei esse portifólio com o intuito de mostrar outros projetos que criei",
-    tecnologias: ["Next.js", "HTML", "JavaScript", "CSS", "Tailwind"],
-  },
-  {
     code: "https://github.com/rodrigueslucas062/Spotify",
     demo: "https://spotify-interface-nine.vercel.app/",
-    imagemSrc: Curtidas,
+    imagemSrc: Spotify,
     imagemAlt: "Imagem do projeto",
-    titulo: "Spotify interface",
-    descricao: "Home do Spotify",
-    descricao_modal: "Descrição do projeto Spotify interface",
+    titulo: "Spotify",
+    descricao:
+      "Esse projeto foi meu primeiro contato com Tailwind, consiste na recriação da interface do Spotify utilizando Next.js e Tailwind CSS. O uso das classes utilitárias do Tailwind permitiu uma estilização concisa e legível, resultando em uma interface visualmente impressionante.",
+    descricao_modal: "No momento, não estou mais envolvido nesse projeto. Procurei ser o mais fiel possível à interface utilizada, dentro dos limites dos meus conhecimentos na época. Não é nada responsivo, está aqui para ver minha evolução ao longo do tempo",
     tecnologias: ["React", "Next.js", "CSS", "HTML", "JavaScript"],
-  },
-  {
-    code: "https://github.com/rodrigueslucas062/Rocketseat",
-    demo: "https://spotify-interface-nine.vercel.app/",
-    imagemSrc: Curtidas,
-    imagemAlt: "Imagem do projeto",
-    titulo: "Bloco de anotações",
-    descricao: "ToDo list com anotações",
-    descricao_modal: "Descrição do projeto Bloco de anotações",
-    tecnologias: ["Next.js", "CSS", "HTML", "JavaScript", "Tailwind", "SpeechRecognitionAPI"],
+    libs: ["Nenhuma lib foi utilizada nesse projeto"],
   },
   {
     code: "https://github.com/rodrigueslucas062/jva-energia",
     demo: "https://jva-energia.vercel.app/",
-    imagemSrc: Curtidas,
+    imagemSrc: Jva,
     imagemAlt: "Imagem do projeto",
     titulo: "JVA Energia",
-    descricao: "Site JVA energia",
-    descricao_modal: "Descrição do site JVA Energia",
+    descricao: "Nesse projeto, criei uma landing page para um site de energia solar. Além de apresentar todas as vantagens e benefícios da energia solar de forma clara e direta, também incluí uma seção onde os visitantes podem deixar suas dúvidas e solicitar orçamentos. Utilizando Next.js e Tailwind.",
+    descricao_modal: "Desenvolvi a landing page para o site da Jva. Já estava estudando a estilização com Tailwind há algum tempo e isso me permitiu realizar um trabalho significativamente mais competente em comparação com projetos anteriores, como o do Spotify.",
     tecnologias: ["Next.js", "JavaScript", "Tailwind"],
+    libs: ["Nenhuma lib foi utilizada nesse projeto"],
+  },
+  {
+    code: "https://github.com/rodrigueslucas062/task-manager",
+    demo: "https://task-tree.vercel.app/",
+    imagemSrc: Todo,
+    imagemAlt: "Imagem do projeto",
+    titulo: "Bloco de anotações",
+    descricao:
+      "Esse projeto é um daqueles ToDo lists, mas com uma funcionalidade extra, você pode adicionar blocos de notas como se fossem post-its! Feito com Next.js, as tarefas e notas ficam salvas no localstorage do navegador, então não precisa se preocupar em perder nada. É possivel adicionar notas usando a API de reconhecimento de fala do navegador.",
+    descricao_modal: "Desenvolvi este ToDo list depois de me inspirar em alguns exemplos no LinkedIn e Youtube. Há algum tempo, desejava organizar minhas tarefas de forma mais eficiente, então surgiu essa ideia. Durante o desenvolvimento, ocorreu-me a possibilidade de integrar outro projeto em andamento, então adicionei os Post-Its. Continuo trabalhando neste projeto.",
+    tecnologias: [
+      "Next.js",
+      "JavaScript",
+      "Tailwind",
+      "SpeechRecognitionAPI",
+      "Localstorage",
+      "Custom Hooks",
+    ],
+    libs:["Radix-ui", "Sonner", "Lucid-react"],
   },
 ];
 
-const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descricao_modal, tecnologias }) => {
+const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descricao_modal, tecnologias, libs }) => {
   return (
     <Dialog.Root>
       <Dialog.Trigger>
-        <div className="flex bg-zinc-50/20 backdrop-blur-sm p-3 text-left rounded-md gap-2 border-2 border-azul-claro w-full">
-          <Image src={imagemSrc} alt={imagemAlt} max-width={100} height={100} className="rounded-md" />
+        <div className="flex flex-col bg-zinc-900/40 items-center backdrop-blur-md p-4 rounded-md gap-2 ring-2 ring-gray-700">
+          <Image
+            src={imagemSrc}
+            alt={imagemAlt}
+            max-width={250}
+            height={250}
+            className="rounded-md ring-1 ring-azul-claro"
+          />
           <div className="flex flex-col space-y-3">
             <strong className="font-semi-bold">{titulo}</strong>
-            <span className="text-sm font-semibold text-white">{descricao}</span>
-            <div className="flex gap-2 items-center">
-              <Link href={code} target="_blank"
-                className="flex bg-zinc-900 rounded-md border-2 border-azul-claro justify-center items-center p-2 gap-2 text-white" 
-                onClick={(e) => e.stopPropagation()}>
+            <span className="text-sm font-semibold text-left text-white">
+              {descricao}
+            </span>
+            <div className="flex justify-around items-center">
+              <Link
+                href={code}
+                target="_blank"
+                className="flex bg-zinc-900 rounded-md ring-2 ring-azul-claro justify-center items-center px-3 py-2 gap-2 text-white"
+                onClick={(e) => e.stopPropagation()}
+              >
                 <Github size={16} />
                 <span className="text-sm">Code</span>
               </Link>
-              <Link href={demo} target="_blank"
-                className="flex bg-zinc-900 rounded-md border-2 border-azul-claro justify-center items-center p-2 gap-2 text-white" 
-                onClick={(e) => e.stopPropagation()}>
+              <Link
+                href={demo}
+                target="_blank"
+                className="flex bg-zinc-900 rounded-md ring-2 ring-azul-claro justify-center items-center px-3 py-2 gap-2 text-white"
+                onClick={(e) => e.stopPropagation()}
+              >
                 <ExternalLink size={16} />
                 <span className="text-sm">Demo</span>
               </Link>
@@ -76,36 +93,58 @@ const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descric
         </div>
       </Dialog.Trigger>
 
-      <Dialog.Portal>
-        <Dialog.DialogOverlay className="inset-0 fixed bg-black/90">
-          <DialogContent className="fixed z-50 p-8 inset-0 bg-zinc-800 border-2 border-gray-700 rounded-2xl md:inset-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[940px] w-full md:h-[80vh] flex flex-col outline-none overflow-hidden">
-            <Dialog.Close className="absolute right-0 top-0 p-1.5 text-gray-400 hover:text-gray-100 rounded-xl">
-              <X size={20} />
+      <Dialog.Portal >
+        <Dialog.DialogOverlay className="inset-0 fixed bg-black/20">
+          <Dialog.DialogContent className="fixed z-10 inset-0 md:inset-auto max-md:top-[35%] lg:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[640px] w-full md:h-[60vh] bg-zinc-800 max-md:rounded-t-3xl lg:rounded-3xl flex flex-col outline-none overflow-hidden">
+            <Dialog.Close className="hover:bg-gray-300 p-2 rounded-full absolute top-2 right-2 hover:text-zinc-900 text-gray-200">
+              <X className="size-5" />
             </Dialog.Close>
-            <div className="flex-1 flex gap-8">
-              <h1>oi</h1>
+            <div className="flex justify-center p-3 h-screen overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+              <div className="mt-4 inline-block w-5/6 space-y-4">
+                <h2 className="font-semibold text-center text-lg my-2">Sobre o projeto</h2>
+                <span>{descricao_modal}</span>
+                <h2 className="font-semibold text-center text-lg my-2">Tech Stack</h2>
+                <TagsGrid tecnologias={tecnologias} />
+                <h2 className="font-semibold text-center text-lg my-2">Libs utilizadas</h2>
+                <LibsGrid libs={libs} />
+              </div>
             </div>
-          </DialogContent>
+          </Dialog.DialogContent>
         </Dialog.DialogOverlay>
       </Dialog.Portal>
     </Dialog.Root>
   );
 };
 
-// const TagsGrid = ({ tecnologias }) => {
-//   return (
-//     <div className="flex flex-wrap gap-2">
-//       {tecnologias.map((tag, index) => (
-//         <div
-//           key={index}
-//           className="bg-zinc-900 p-2 rounded-md border-2 border-azul-claro flex items-center justify-center"
-//         >
-//           <span className="text-xs text-gray-400 px-2">{tag}</span>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
+const TagsGrid = ({ tecnologias }) => {
+  return (
+    <div className="flex flex-wrap gap-4">
+      {tecnologias.map((tag, index) => (
+        <div
+          key={index}
+          className="bg-zinc-900 p-2 rounded-md ring-2 ring-azul-claro flex items-center justify-center"
+        >
+          <span className="text-xs text-gray-400 px-2">{tag}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const LibsGrid = ({ libs }) => {
+  return (
+    <div className="flex flex-wrap gap-4">
+      {libs.map((libs, index) => (
+        <div
+          key={index}
+          className="bg-zinc-900 p-2 rounded-md ring-2 ring-azul-claro flex items-center justify-center"
+        >
+          <span className="text-xs text-gray-400 px-2">{libs}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 const ProjetosGrid = () => {
   return (
@@ -121,6 +160,7 @@ const ProjetosGrid = () => {
           descricao={info.descricao}
           descricao_modal={info.descricao_modal}
           tecnologias={info.tecnologias}
+          libs={info.libs}
         />
       ))}
     </>
