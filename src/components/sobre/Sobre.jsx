@@ -5,7 +5,7 @@ import { CertificadosGrid, CertificadosGridModal } from "../habilidades/certific
 
 const Sobre = () => {
     return (
-        <section id="sobre" className="flex max-lg:flex-col gap-4 bg-zinc-800">
+        <div className="flex max-lg:flex-col gap-4 bg-zinc-800 mt-3">
             <div className="flex flex-1">
                 <div className="group w-full p-4 bg-white/5 space-y-2 rounded-xl border-2 border-gray-700 hover:bg-white/10">
                     <div className="max-md:flex-col flex gap-4 justify-around">
@@ -114,7 +114,7 @@ const Sobre = () => {
                     </ol>
                 </div>
             </div>
-        </section>
+        </div>
     );
 }
 

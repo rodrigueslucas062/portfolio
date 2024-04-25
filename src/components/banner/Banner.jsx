@@ -50,7 +50,7 @@ const Banner = () => {
     }
 
     return (
-        <section className="py-32 lg:py-44 bg-center-top bg-cover bg-no-repeat banner" id="home">
+        <section className="py-24 lg:py-44 bg-center-top bg-cover bg-no-repeat banner" id="home">
             <div className="justify-center">
                 <TrackVisibility>
                     {({ isVisible }) =>
