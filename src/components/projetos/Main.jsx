@@ -1,36 +1,8 @@
 import Link from "next/link";
 import ProjetosGrid from "./projetos"
-import { useEffect, useRef } from "react";
 import { ExternalLink } from "lucide-react";
 
-
 const MainContent = () => {
-    const svgRef = useRef(null);
-
-    useEffect(() => {
-        const handleResize = () => {
-            const svg = svgRef.current;
-            if (svg) {
-                const rect = svg.getBoundingClientRect();
-                const width = rect.width;
-                const height = rect.height;
-                svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
-            }
-        };
-
-        const handleScroll = () => {
-            handleResize();
-        };
-
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("resize", handleResize);
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-
     return (
         <div className="flex-1 mt-3">
             {/* <button className="flex text-sm font-semibold hover:bg-zinc-900/50 hover:backdrop-blur-sm px-3 py-2 rounded-xl">
