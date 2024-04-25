@@ -47,7 +47,7 @@ const Navbar = () => {
                 <ul className="max-md:hidden flex font-medium rounded-lg">
                     {navLinks.map((item) => (
                         <li key={item.label}>
-                            <a href={item.href} className="hover:bg-zinc-400 text-zinc-900 hover:text-zinc-200 2xl:px-6 px-3 p-2 rounded-xl flex gap-2">{item.label}</a>
+                            <a href={item.href} className="hover:ring-1 ring-azul-claro text-zinc-900 2xl:px-6 px-4 py-2 rounded-xl flex gap-3">{item.label}</a>
                         </li>
                     ))}
                 </ul>

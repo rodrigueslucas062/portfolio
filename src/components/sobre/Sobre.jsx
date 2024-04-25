@@ -52,7 +52,7 @@ const Sobre = () => {
                     </div>
                     <div className="max-md:flex-col flex gap-4">
                         <div className="flex flex-col lg:w-1/2 bg-zinc-900 rounded-lg p-4">
-                            <h1 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">Tecnologias</h1>
+                            <h1 className="mb-4 text-xl font-bold text-white">Tecnologias</h1>
                             <TagsGrid />
                         </div>
                         <div className="flex flex-col lg:w-1/2 bg-zinc-900 rounded-lg p-4 space-y-4">
