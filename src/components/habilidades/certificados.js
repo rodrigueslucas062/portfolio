@@ -39,7 +39,7 @@ const Certificados = ({ link, titulo, descricao }) => {
     <Link
       href={link}
       target="_blank"
-      className="bg-zinc-800 py-2 px-6 rounded-2xl border-2 border-azul-claro flex items-center"
+      className="bg-zinc-800 py-2 px-6 rounded-2xl border-2 border-azul-claro flex items-center hover:bg-white/5"
     >
       <div className="flex flex-col space">
         <strong className="font-semi-bold">{titulo}</strong>

@@ -62,17 +62,16 @@ const Sobre = () => {
                                     <Dialog.Trigger>
                                         <div className="text-sm text-gray-400 flex gap-2 items-center hover:bg-zinc-800 px-2 py-1 rounded-md hover:ring-1 ring-azul-claro">
                                             Exibir todos
-                                            <ExternalLink size={12} />
                                         </div>
                                     </Dialog.Trigger>
 
                                     <Dialog.Portal>
                                         <Dialog.DialogOverlay className="inset-0 fixed bg-black/20">
-                                            <Dialog.DialogContent className="fixed z-10 inset-0 md:inset-auto max-md:top-[40%] lg:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[640px] w-full md:h-[60vh] bg-zinc-800 max-md:rounded-t-3xl lg:rounded-3xl flex flex-col outline-none overflow-hidden">
+                                            <Dialog.DialogContent className="fixed z-10 inset-0 md:inset-auto max-md:top-[40%] lg:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[640px] w-full md:h-[60vh] bg-zinc-800 max-md:rounded-t-3xl lg:rounded-3xl flex flex-col outline-none overflow-hidden ring-1 ring-azul-claro">
                                                 <Dialog.Close className="hover:bg-gray-300 p-2 rounded-full absolute top-2 right-2 hover:text-zinc-900 text-gray-200">
                                                     <X className="size-5" />
                                                 </Dialog.Close>
-                                                <div className="flex justify-center p-4">
+                                                <div className="flex justify-center p-4 overflow-x-hidden">
                                                     <div className="rounded-lg mt-8 inline-block w-5/6 space-y-3">
                                                         <h2 className="font-semibold text-center text-lg">Certificados</h2>
                                                         <CertificadosGridModal />

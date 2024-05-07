@@ -52,13 +52,13 @@ const Navbar = () => {
                     ))}
                 </ul>
                 <Dialog.Root>
-                    <Dialog.Trigger className="lg:invisible bg-zinc-200 hover:bg-zinc-400 text-zinc-900 hover:text-zinc-200 p-2 rounded-full">
+                    <Dialog.Trigger className="lg:hidden bg-zinc-200 hover:bg-zinc-400 text-zinc-900 hover:text-zinc-200 p-2 rounded-full">
                         <MoreHorizontal size={18} />
                     </Dialog.Trigger>
 
                     <Dialog.Portal>
                         <Dialog.DialogOverlay className="inset-0 fixed bg-black/70">
-                            <Dialog.DialogContent className="fixed z-10 inset-0 md:inset-auto max-md:top-[55%] lg:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[640px] w-full md:h-[65vh] bg-zinc-800 max-md:rounded-t-3xl lg:rounded-3xl flex flex-col outline-none overflow-hidden">
+                            <Dialog.DialogContent className="fixed z-10 inset-0 md:inset-auto max-md:top-[50%] lg:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[640px] w-full md:h-[65vh] bg-zinc-800 max-md:rounded-t-3xl lg:rounded-3xl flex flex-col outline-none overflow-hidden">
                                 <Dialog.Close className="hover:bg-gray-300 p-2 rounded-full absolute top-2 right-2 text-gray-200 hover:text-zinc-800">
                                     <X className="size-5" />
                                 </Dialog.Close>
