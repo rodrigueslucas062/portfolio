@@ -6,7 +6,7 @@ const MainContent = () => {
     return (
         <div className="flex-1 mt-3">
             {/* <button className="flex text-sm font-semibold hover:bg-zinc-900/50 hover:backdrop-blur-sm px-3 py-2 rounded-xl">
-                <Link href={''} className="flex items-center gap-2" >
+                <Link href={'/projects'} className="flex items-center gap-2" >
                     Ver todos
                     <ExternalLink size={12} />
                 </Link>

@@ -78,7 +78,7 @@ const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descric
             <Link
               href={code}
               target="_blank"
-              className="flex bg-zinc-900 rounded-md ring-2 ring-azul-claro justify-center items-center px-3 py-2 gap-2 text-white"
+              className="flex bg-zinc-900 rounded-md ring-2 ring-azul-claro justify-center items-center px-3 py-2 gap-2 text-white hover:bg-white/5"
               onClick={(e) => e.stopPropagation()}
             >
               <Github size={16} />
@@ -87,7 +87,7 @@ const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descric
             <Link
               href={demo}
               target="_blank"
-              className="flex bg-zinc-900 rounded-md ring-2 ring-azul-claro justify-center items-center px-3 py-2 gap-2 text-white"
+              className="flex bg-zinc-900 rounded-md ring-2 ring-azul-claro justify-center items-center px-3 py-2 gap-2 text-white hover:bg-white/5"
               onClick={(e) => e.stopPropagation()}
             >
               <ExternalLink size={16} />
@@ -105,11 +105,17 @@ const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descric
             </Dialog.Close>
             <div className="flex justify-center p-3 h-screen overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
               <div className="mt-4 inline-block w-5/6 space-y-4">
-                <h2 className="font-semibold text-center text-lg my-2">Sobre o projeto</h2>
+                <h2 className="font-semibold text-center text-lg my-2">
+                  Sobre o projeto
+                </h2>
                 <span>{descricao_modal}</span>
-                <h2 className="font-semibold text-center text-lg my-2">Tech Stack</h2>
+                <h2 className="font-semibold text-center text-lg my-2">
+                  Tech Stack
+                </h2>
                 <TagsGrid tecnologias={tecnologias} />
-                <h2 className="font-semibold text-center text-lg my-2">Libs utilizadas</h2>
+                <h2 className="font-semibold text-center text-lg my-2">
+                  Libs utilizadas
+                </h2>
                 <LibsGrid libs={libs} />
               </div>
             </div>
