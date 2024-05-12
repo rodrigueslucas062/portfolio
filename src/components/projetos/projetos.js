@@ -70,11 +70,11 @@ const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descric
           />
           <div className="flex flex-col space-y-3">
             <strong className="font-semi-bold">{titulo}</strong>
-            <span className="text-sm font-semibold text-left text-white">
+            <span className="text-sm font-semibold text-left lg:px-5 text-white">
               {descricao}
             </span>
           </div>
-          <div className="flex gap-4 mt-auto">
+          <div className="flex gap-4 mt-10">
             <Link
               href={code}
               target="_blank"
@@ -122,6 +122,7 @@ const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descric
           </Dialog.DialogContent>
         </Dialog.DialogOverlay>
       </Dialog.Portal>
+
     </Dialog.Root>
   );
 };
@@ -160,9 +161,8 @@ const ProjetosGrid = () => {
   return (
     <>
       {informacoes.map((info, index) => (
-        <div className="flex flex-1">
+        <div key={index} className="flex flex-1">
           <Projetos
-            key={index}
             code={info.code}
             demo={info.demo}
             imagemSrc={info.imagemSrc}
