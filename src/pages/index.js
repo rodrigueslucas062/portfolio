@@ -3,6 +3,7 @@ import Contato from "@/components/contato/Contato";
 import MainContent from "@/components/projetos/Main";
 import Navbar from "@/components/navbar/Navbar";
 import Sobre from "@/components/sobre/Sobre";
+import Stars from "@/components/projetos/Stars";
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
       <section id="sobre" className="flex flex-col flex-1 bg-zinc-800 px-4 md:px-8 py-20">
         <Sobre />
       </section>
-      <section id="projetos" className="flex flex-col flex-1 px-4 md:px-8 py-16 bg-center-top bg-cover bg-no-repeat galaxy">
+      <section id="projetos" className="flex flex-col flex-1 px-4 md:px-8 py-16">
+        <Stars />
         <MainContent />
       </section>
       <section id="contato">

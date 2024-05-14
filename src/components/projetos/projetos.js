@@ -60,7 +60,7 @@ const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descric
   return (
     <Dialog.Root>
       <Dialog.Trigger>
-        <div className="flex flex-col bg-zinc-900/40 h-full items-center backdrop-blur-md p-4 rounded-md gap-2 ring-2 ring-gray-700">
+        <div className="flex flex-col bg-white/10 h-full items-center backdrop-blur-md p-4 rounded-md gap-2 ring-2 ring-gray-700">
           <Image
             src={imagemSrc}
             alt={imagemAlt}
