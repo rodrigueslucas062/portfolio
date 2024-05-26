@@ -54,6 +54,19 @@ const informacoes = [
     ],
     libs: ["Radix-ui", "Sonner", "Lucid-react"],
   },
+  {
+    code: "https://github.com/rodrigueslucas062/calculadora-custos",
+    demo: "https://custo-producao.vercel.app/",
+    imagemSrc: Todo,
+    imagemAlt: "Imagem do projeto",
+    titulo: "Calculadora de custo de produção",
+    descricao:
+      "Esse projeto foi desenvolvido para ajudar um amigo a calcular o custo de produção de doces e salgados que ele está vendendo atualmente. A ideia era simplificar o processo de anotar as receitas e calcular os custos, evitando o uso de planilhas no Excel ou de plataformas pagas. É uma solução prática e acessível para facilitar o gerenciamento das receitas e custos de produção. Continuo trabalhando neste projeto.",
+    descricao_modal:
+      "Esse projeto foi desenvolvido para ajudar um amigo a calcular o custo de produção de doces e salgados que ele está vendendo atualmente. A ideia era simplificar o processo de anotar as receitas e calcular os custos, evitando o uso de planilhas no Excel ou de plataformas pagas. É uma solução prática e acessível para facilitar o gerenciamento das receitas e custos de produção.",
+    tecnologias: ["Next.js", "JavaScript", "Tailwind", "Localstorage"],
+    libs: ["Radix-ui", "Sonner", "Lucid-react"],
+  },
 ];
 
 const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descricao_modal, tecnologias, libs }) => {
@@ -122,7 +135,6 @@ const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descric
           </Dialog.DialogContent>
         </Dialog.DialogOverlay>
       </Dialog.Portal>
-
     </Dialog.Root>
   );
 };
