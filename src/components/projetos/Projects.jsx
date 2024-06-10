@@ -2,24 +2,19 @@ import { fetchFigmaData } from "@/pages/api/figma";
 import { useEffect, useState } from "react";
 
 export default function AllProjects() {
-    const [frameUrl, setFrameUrl] = useState('');
+    const [fileUrl, setFileUrl] = useState('');
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         const loadFigmaData = async () => {
             try {
                 const data = await fetchFigmaData();
-                const frameId = 'YOUR_FRAME_ID';
-                const frame = data.document.children[0].children.find(child => child.id === frameId);
-
-                if (frame) {
-                    const figmaFileId = process.env.NEXT_PUBLIC_FIGMA_FILE_ID;
-                    const frameUrl = `https://www.figma.com/file/${figmaFileId}/${frame.name}?node-id=${frame.id}`;
-                    setFrameUrl(`https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(frameUrl)}`);
-                } else {
-                    console.error('Frame not found');
-                }
+                const figmaFileId = process.env.NEXT_PUBLIC_FIGMA_FILE_ID;
+                const fileUrl = `https://www.figma.com/file/${figmaFileId}`;
+                setFileUrl(`https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(fileUrl)}`);
             } catch (error) {
                 console.error('Error fetching Figma data:', error);
+                setError(error.message);
             }
         };
 
@@ -28,8 +23,8 @@ export default function AllProjects() {
 
     return (
         <div>
-            <h1>Figma File Viewer</h1>
-            {frameUrl ? <iframe src={frameUrl} width="800" height="600" style={{ border: 'none' }}></iframe> : <p>Loading...</p>}
+            <iframe style={{ border: '1px solid rgba(0, 0, 0, 0.1)' }} width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FWVxv3zCVC91AkKkKsrSwmx%2FExpo-Una-prototype%3Fnode-id%3D0-1%26t%3DOKUDIt7KnEwDwq6u-1" allowfullscreen></iframe>
         </div>
+
     );
 }
