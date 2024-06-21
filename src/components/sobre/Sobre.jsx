@@ -95,8 +95,8 @@ const Sobre = () => {
                         <li className="mb-4 ms-4">
                             <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-azul-claro"></div>
                             <time className="mb-1 text-sm font-normal leading-none text-gray-400">CP3 Tecnologia, Jun/2023 - Atualmente</time>
-                            <h3 className="text-lg font-semibold text-white">Desenvolvedor Front-end</h3>
-                            <p className="mb-4 text-sm font-normal text-gray-400">Atuo desenvolvendo Micro Frontends escaláveis com React para plicações de grande escala</p>
+                            <h3 className="text-lg font-semibold text-white">Analista de sistemas Júnior</h3>
+                            <p className="mb-4 text-sm font-normal text-gray-400">Atuo desenvolvendo Micro Frontends escaláveis com React para aplicações de grande escala</p>
                         </li>
                         <li className="mb-4 ms-4">
                             <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-azul-claro"></div>
