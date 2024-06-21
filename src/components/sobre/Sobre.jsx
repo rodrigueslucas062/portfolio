@@ -94,6 +94,12 @@ const Sobre = () => {
                     <ol className="relative border-s border-azul-claro">
                         <li className="mb-4 ms-4">
                             <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-azul-claro"></div>
+                            <time className="mb-1 text-sm font-normal leading-none text-gray-400">CP3 Tecnologia, Jun/2023 - Atualmente</time>
+                            <h3 className="text-lg font-semibold text-white">Desenvolvedor Front-end</h3>
+                            <p className="mb-4 text-sm font-normal text-gray-400">Atuo desenvolvendo Micro Frontends escaláveis com React para plicações de grande escala</p>
+                        </li>
+                        <li className="mb-4 ms-4">
+                            <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-azul-claro"></div>
                             <time className="mb-1 text-sm font-normal leading-none text-gray-400">RentzApp, Mai/2023 - Dez/2023</time>
                             <h3 className="text-lg font-semibold text-white">Desenvolvedor Front-end</h3>
                             <p className="mb-4 text-sm font-normal text-gray-400">Atuei utilizando React e Next.js na criação de componentes, páginas estáticas e dinâmicas, integração com APIs GraphQL para a listagem de produtos, e funcionalidades SEO.</p>
@@ -104,12 +110,12 @@ const Sobre = () => {
                             <h3 className="text-lg font-semibold text-white">Desenvolvedor Full-stack</h3>
                             <p className="text-sm font-normal text-gray-400">Desempenhei um papel na manutenção do banco de dados, implementação de melhorias com Java e Html, e na documentação e teste das APIs internas.</p>
                         </li>
-                        <li className="ms-4">
+                        {/* <li className="ms-4">
                             <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-azul-claro"></div>
                             <time className="mb-1 text-sm font-normal leading-none text-gray-400">Irsis, Ago/2021 - Abr/2022</time>
                             <h3 className="text-lg font-semibold text-white">Suporte a Sistemas CRM</h3>
                             <p className="text-sm font-normal text-gray-400">Atuei realizando melhorias, manutenções, customizações e oferecendo suporte no sistema CRM Dynamics 365, atendendo às necessidades específicas de cada cliente.</p>
-                        </li>
+                        </li> */}
                     </ol>
                 </div>
             </div>
