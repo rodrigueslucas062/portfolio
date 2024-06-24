@@ -3,6 +3,7 @@ import Image from "next/image";
 import Spotify from "../../../public/images/Spotify.png";
 import Todo from "../../../public/images/Todo.png";
 import Jva from "../../../public/images/Jva.png";
+import ExpUna from '../../../public/images/Expouna.png'
 import { ExternalLink, Github, X } from "lucide-react";
 import Link from "next/link";
 import * as Dialog from "@radix-ui/react-dialog";
@@ -66,6 +67,19 @@ const informacoes = [
       "Esse projeto foi desenvolvido para ajudar um amigo a calcular o custo de produção de doces e salgados que ele está vendendo atualmente. A ideia era simplificar o processo de anotar as receitas e calcular os custos, evitando o uso de planilhas no Excel ou de plataformas pagas. É uma solução prática e acessível para facilitar o gerenciamento das receitas e custos de produção.",
     tecnologias: ["Next.js", "JavaScript", "Tailwind", "Localstorage"],
     libs: ["Radix-ui", "Sonner", "Lucid-react"],
+  },
+  {
+    code: "https://github.com/rodrigueslucas062/exp-una",
+    demo: "https://exp-una.vercel.app/",
+    imagemSrc: ExpUna,
+    imagemAlt: "Imagem do projeto",
+    titulo: "Expo Una",
+    descricao:
+      "Esse projeto foi desenvolvido para o trabalho final da matéria de Gerenciamento de Projetos da faculdade. Consiste em uma plataforma para disponibilizar os dados da apresentação das turmas de TI. Neste projeto tive a oportunidade de liderar uma pequena equipe de desenvolvimento, desenvolvi o layout no Figma e orientei meus colegas a desenvolver a aplicação, também desenvolvi algumas funcionalidades no site.",
+    descricao_modal:
+      "Esse projeto foi desenvolvido para o trabalho final da matéria de Gerenciamento de Projetos da faculdade. Consiste em uma plataforma para disponibilizar os dados da apresentação das turmas de TI. Neste projeto tive a oportunidade de liderar uma pequena equipe de desenvolvimento, desenvolvi o layout no Figma e orientei meus colegas a desenvolver a aplicação, também desenvolvi algumas funcionalidades no site.",
+    tecnologias: ["Next.js", "JavaScript", "Figma"],
+    libs: ["Radix-ui", "Sonner", "Lucid-react", "Aceternity UI", 'Framer Motion'],
   },
 ];
 
