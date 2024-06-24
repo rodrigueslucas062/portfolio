@@ -23,7 +23,7 @@ export default function AllProjects() {
 
     return (
         <div>
-            <iframe style={{ border: '1px solid rgba(0, 0, 0, 0.1)' }} width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FWVxv3zCVC91AkKkKsrSwmx%2FExpo-Una-prototype%3Fnode-id%3D0-1%26t%3DOKUDIt7KnEwDwq6u-1" allowfullscreen></iframe>
+            <iframe style={{ border: '1px solid rgba(0, 0, 0, 0.1)' }} width="800" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FWVxv3zCVC91AkKkKsrSwmx%2FExpo-Una-prototype%3Fnode-id%3D0-1%26t%3DOKUDIt7KnEwDwq6u-1" allowfullscreen></iframe>
         </div>
 
     );
