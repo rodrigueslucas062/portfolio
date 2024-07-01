@@ -23,13 +23,18 @@ const informacoes = [
     descricao: "Rocketseat",
   },
   {
-    link: "",
+    link: "#",
     titulo: "Análise de dados e big data",
     descricao: "Centro Universitário Una",
   },
   {
-    link: "",
+    link: "#",
     titulo: "Design Thinking e Inovação",
+    descricao: "Centro Universitário Una",
+  },
+  {
+    link: "#",
+    titulo: "Introdução ao UX Design",
     descricao: "Centro Universitário Una",
   },
 ];
