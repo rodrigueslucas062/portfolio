@@ -1,14 +1,12 @@
 import Banner from "@/components/banner/Banner";
 import Contato from "@/components/contato/Contato";
 import MainContent from "@/components/projetos/Main";
-import Navbar from "@/components/navbar/Navbar";
 import Sobre from "@/components/sobre/Sobre";
 import Stars from "@/components/projetos/Stars";
 
 export default function Home() {
   return (
     <div className="h-screen flex flex-col">
-      <Navbar />
       <section id="home">
       <Banner />
       </section>

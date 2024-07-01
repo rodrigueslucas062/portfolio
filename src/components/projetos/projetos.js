@@ -8,7 +8,7 @@ import { ExternalLink, Github, X } from "lucide-react";
 import Link from "next/link";
 import * as Dialog from "@radix-ui/react-dialog";
 
-const informacoes = [
+export const informacoes = [
   {
     code: "https://github.com/rodrigueslucas062/Spotify",
     demo: "https://spotify-interface-nine.vercel.app/",
