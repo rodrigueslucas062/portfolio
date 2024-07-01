@@ -3,7 +3,7 @@ import Image from "next/image";
 import Spotify from "../../../public/images/Spotify.png";
 import Todo from "../../../public/images/Todo.png";
 import Jva from "../../../public/images/Jva.png";
-import ExpUna from '../../../public/images/Expouna.png'
+import ExpUna from '../../../public/images/ExpoUna.png'
 import { ExternalLink, Github, X } from "lucide-react";
 import Link from "next/link";
 import * as Dialog from "@radix-ui/react-dialog";
