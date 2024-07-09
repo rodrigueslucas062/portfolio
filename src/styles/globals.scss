@@ -17,16 +17,35 @@ body {
   background-image: url("../../public/images/banner-bg.png");
 }
 
-.terreno {
-  background-image: url('../../public/images/projects-banner/Terreno.svg');
-}
-
-.montanha {
-  background-image: url('../../public/images/projects-banner/Montanhas.svg');
+.ceu, .montanha, .terreno {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: height 0.3s ease-out;
 }
 
 .ceu {
-  background-image: url('../../public/images/projects-banner/CeuNoturno.png');
+  background-image: url("../../public/images/projects-banner/CeuNoturno.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.montanha {
+  background-image: url("../../public/images/projects-banner/Montanhas.svg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.terreno {
+  background-image: url("../../public/images/projects-banner/Terreno.svg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .galaxy {
@@ -55,7 +74,7 @@ body {
 
   ::-webkit-scrollbar-thumb {
     @apply bg-zinc-800;
-   @apply rounded-full;
+    @apply rounded-full;
   }
 
   ::-webkit-scrollbar-track {
@@ -65,4 +84,4 @@ body {
 
 //Animação banner
 @import "../styles/animations/animations.scss";
-@import "../styles/animations//stars.scss"
+@import "../styles/animations//stars.scss";
