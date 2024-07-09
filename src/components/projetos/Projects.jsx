@@ -55,7 +55,7 @@ export default function AllProjects() {
             <section className="flex overflow-hidden">
                 <div className="w-1/2 p-8">
                     <span>
-                        "Esse projeto foi desenvolvido para o trabalho final da matéria de Gerenciamento de Projetos da faculdade. Consiste em uma plataforma para disponibilizar os dados da apresentação das turmas de TI. Neste projeto tive a oportunidade de liderar uma pequena equipe de desenvolvimento, desenvolvi o layout no Figma e orientei meus colegas a desenvolver a aplicação, também desenvolvi algumas funcionalidades no site."
+                        Esse projeto foi desenvolvido para o trabalho final da matéria de Gerenciamento de Projetos da faculdade. Consiste em uma plataforma para disponibilizar os dados da apresentação das turmas de TI. Neste projeto tive a oportunidade de liderar uma pequena equipe de desenvolvimento, desenvolvi o layout no Figma e orientei meus colegas a desenvolver a aplicação, também desenvolvi algumas funcionalidades no site.
                     </span>
                 </div>
                 <div className="w-1/2">
