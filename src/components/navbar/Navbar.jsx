@@ -39,7 +39,7 @@ const Navbar = () => {
     }, [])
 
     return (
-        <nav className="fixed flex top-3 w-full justify-center z-10 px-4 2xl:px-0">
+        <nav className="fixed flex top-3 w-full justify-center z-50 px-4 2xl:px-0">
             <div className="flex w-full lg:w-2/5 border-2 border-zinc-900 bg-gray-50/70 items-center lg:justify-center px-4 py-2 rounded-full backdrop-blur-sm transition-visible duration-500 ease-in-out">
                 <div className='lg:hidden max-md:mx-auto text-zinc-900 text-lg font-semibold p-2'>
                     <span>{currentSection}</span>
