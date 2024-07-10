@@ -68,10 +68,10 @@ const Banner = () => {
                                             <h5 className="mb-1 text-xl font-medium text-white">Lucas Rodrigues</h5>
                                             <span className="text-sm mb-4 text-gray-400">Desenvolvedor Front-end</span>
                                             <div className="flex gap-4 mb-4">
-                                                <Link href={"https://github.com/rodrigueslucas062"} className='hover:bg-white hover:text-zinc-900 p-1 rounded-full'>
+                                                <Link href={"https://github.com/rodrigueslucas062"} className='hover:bg-white hover:text-zinc-900 hover:transition-all duration-500 ease-in-out p-1 rounded-full'>
                                                     <Github size={18} />
                                                 </Link>
-                                                <Link href={"https://www.linkedin.com/in/rodrigueslucasdev/"} className='hover:bg-azul-claro p-1 rounded-md'>
+                                                <Link href={"https://www.linkedin.com/in/rodrigueslucasdev/"} className='hover:bg-azul-claro hover:transition-all duration-500 ease-in-out p-1 rounded-md'>
                                                     <Linkedin size={18} />
                                                 </Link>
                                             </div>

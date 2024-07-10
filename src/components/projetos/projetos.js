@@ -3,12 +3,12 @@ import Image from "next/image";
 import Spotify from "../../../public/images/Spotify.png";
 import Todo from "../../../public/images/Todo.png";
 import Jva from "../../../public/images/Jva.png";
-import ExpUna from '../../../public/images/Expouna.png'
+import ExpUna from '../../../public/images/ExpoUna.png'
 import { ExternalLink, Github, X } from "lucide-react";
 import Link from "next/link";
 import * as Dialog from "@radix-ui/react-dialog";
 
-const informacoes = [
+export const informacoes = [
   {
     code: "https://github.com/rodrigueslucas062/Spotify",
     demo: "https://spotify-interface-nine.vercel.app/",
@@ -105,7 +105,7 @@ const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descric
             <Link
               href={code}
               target="_blank"
-              className="flex bg-zinc-900 rounded-md ring-2 ring-azul-claro justify-center items-center px-3 py-2 gap-2 text-white hover:bg-white/5"
+              className="flex bg-zinc-900 rounded-md ring-2 ring-azul-claro justify-center items-center px-3 py-2 gap-2 text-white hover:bg-white/5 hover:transition-all duration-500 ease-in-out"
               onClick={(e) => e.stopPropagation()}
             >
               <Github size={16} />
@@ -114,7 +114,7 @@ const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descric
             <Link
               href={demo}
               target="_blank"
-              className="flex bg-zinc-900 rounded-md ring-2 ring-azul-claro justify-center items-center px-3 py-2 gap-2 text-white hover:bg-white/5"
+              className="flex bg-zinc-900 rounded-md ring-2 ring-azul-claro justify-center items-center px-3 py-2 gap-2 text-white hover:bg-white/5 hover:transition-all duration-500 ease-in-out"
               onClick={(e) => e.stopPropagation()}
             >
               <ExternalLink size={16} />
