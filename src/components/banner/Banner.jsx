@@ -50,7 +50,7 @@ const Banner = () => {
     }
 
     return (
-        <section className="py-24 lg:py-44 bg-center-top bg-cover bg-no-repeat banner" id="home">
+        <section className="py-24 lg:py-40 bg-center-top bg-cover bg-no-repeat banner" id="home">
             <div className="justify-center">
                 <TrackVisibility>
                     {({ isVisible }) =>
@@ -60,7 +60,7 @@ const Banner = () => {
                                 <h1 className='font-semibold text-2xl 2xl:text-4xl mb-4'><span className="txt-rotate" data-rotate='["Desenvolvedor Front-end", "Web Designer", "UI/UX Designer"]'><span className="wrap">{text}</span></span></h1>
                                 <p className='md:w-2/3 font-medium md:text-md 2xl:text-xl'>Estudante de Sistemas de Informação, atuo como desenvolvedor front-end, em tecnologias como React e Next.js, busco constantemente aprender e aplicar conhecimentos para impulsionar minha formação profissional. </p>
                             </div>
-                            <div className="flex flex-1 w-full xl:w-2/4 2xl:w-1/3 max-2xl:pt-8 px-4 md:px-10">
+                            <div className="flex flex-1 w-full xl:w-3/4 2xl:w-[45%] max-2xl:pt-8 px-4 md:px-10">
                                 <div className="group w-full p-4 bg-white/5 space-y-2 rounded-xl shadow border-2 border-gray-700 backdrop-blur-sm">
                                     <div className="md:grid grid-cols-2 h-2/3 mb-6">
                                         <div className="flex flex-col items-center pt-10">
