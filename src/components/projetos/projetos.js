@@ -4,6 +4,7 @@ import Spotify from "../../../public/images/Spotify.png";
 import Todo from "../../../public/images/Todo.png";
 import Jva from "../../../public/images/Jva.png";
 import ExpUna from '../../../public/images/ExpoUna.png'
+import Custo from '../../../public/images/Custo.png'
 import { ExternalLink, Github, X } from "lucide-react";
 import Link from "next/link";
 import * as Dialog from "@radix-ui/react-dialog";
@@ -58,7 +59,7 @@ export const informacoes = [
   {
     code: "https://github.com/rodrigueslucas062/calculadora-custos",
     demo: "https://custo-producao.vercel.app/",
-    imagemSrc: Todo,
+    imagemSrc: Custo,
     imagemAlt: "Imagem do projeto",
     titulo: "Calculadora de custo de produção",
     descricao:
