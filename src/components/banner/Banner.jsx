@@ -3,8 +3,8 @@ import TrackVisibility from 'react-on-screen';
 import headerImg from "../../../public/images/header-img.svg"
 import Perfil from '../../../public/images/perfil.jpeg'
 import Image from 'next/image';
-import { Briefcase, GraduationCap, Linkedin, Github } from 'lucide-react';
 import Link from 'next/link';
+import { Briefcase, GithubLogo, GraduationCap, LinkedinLogo } from '@phosphor-icons/react';
 
 const Banner = () => {
     const Curriculo = "/files/LucasRodrigues.pdf"
@@ -22,7 +22,8 @@ const Banner = () => {
         }, delta)
 
         return () => { clearInterval(ticker) }
-    }, [text])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [text,])
 
     const tick = () => {
         let i = loopNum % toRotate.length
@@ -69,10 +70,10 @@ const Banner = () => {
                                             <span className="text-sm mb-4 text-gray-400">Desenvolvedor Front-end</span>
                                             <div className="flex gap-4 mb-4">
                                                 <Link href={"https://github.com/rodrigueslucas062"} className='hover:bg-white hover:text-zinc-900 hover:transition-all duration-500 ease-in-out p-1 rounded-full'>
-                                                    <Github size={18} />
+                                                    <GithubLogo size={20} weight="duotone" />
                                                 </Link>
                                                 <Link href={"https://www.linkedin.com/in/rodrigueslucasdev/"} className='hover:bg-azul-claro hover:transition-all duration-500 ease-in-out p-1 rounded-md'>
-                                                    <Linkedin size={18} />
+                                                    <LinkedinLogo size={22} weight="duotone" />
                                                 </Link>
                                             </div>
                                             <a href={Curriculo} target="_blank"
@@ -82,19 +83,19 @@ const Banner = () => {
                                         <div className="flex flex-col pt-10 px-4 space-y-4">
                                             <h5 className="text-3xl font-bold text-white">Qualificações</h5>
                                             <div className="flex gap-2 items-center">
-                                                <Briefcase />
+                                                <Briefcase size={20} weight="duotone" className='text-white' />
                                                 <span className="text-sm text-gray-400">Desenvolvedor Front-end</span>
                                             </div>
                                             <div className="flex gap-2 items-center">
-                                                <GraduationCap />
+                                                <GraduationCap size={20} weight="duotone" className='text-white' />
                                                 <span className="text-sm text-gray-400">Sistemas de informação</span>
                                             </div>
                                             <div className="flex gap-2 items-center">
-                                                <GraduationCap />
+                                                <GraduationCap size={20} weight="duotone" className='text-white' />
                                                 <span className="text-sm text-gray-400">Web designer</span>
                                             </div>
                                             <div className="flex gap-2 items-center">
-                                                <GraduationCap />
+                                                <GraduationCap size={20} weight="duotone" className='text-white' />
                                                 <span className="text-sm text-gray-400">UX/UI</span>
                                             </div>
                                         </div>

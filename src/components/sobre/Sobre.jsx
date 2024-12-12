@@ -1,8 +1,8 @@
-import { X } from "lucide-react";
 import TagsGrid from "../habilidades/tags";
 import * as Dialog from "@radix-ui/react-dialog";
 import { CertificadosGrid, CertificadosGridModal } from "../habilidades/certificados";
 import { RevealList } from "next-reveal";
+import { X } from "@phosphor-icons/react";
 
 const Sobre = () => {
     return (
@@ -37,23 +37,23 @@ const Sobre = () => {
                                 <h1 className="mb-4 text-xl font-bold text-white">Idiomas</h1>
                                 <div>
                                     <div className="flex justify-between mb-2">
-                                        <span className="text-base font-medium text-white">Português</span>
-                                        <span className="text-base font-medium text-white">Nativo</span>
-                                    </div>
-                                    <div className="flex flex-col border-2 border-azul-claro rounded-full justify-between mb-1 p-1">
-                                        <div className="w-full rounded-full h-2.5 bg-azul-petroleo">
-                                            <div className="bg-azul-claro h-2.5 rounded-full w-full"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="flex justify-between mb-2">
                                         <span className="text-base font-medium text-white">Inglês</span>
                                         <span className="text-base font-medium text-white">Intermediario</span>
                                     </div>
                                     <div className="flex flex-col border-2 border-azul-claro rounded-full justify-between mb-1 p-1">
                                         <div className="w-full rounded-full h-2.5 bg-azul-petroleo">
                                             <div className="bg-azul-claro h-2.5 rounded-full w-1/2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className="flex justify-between mb-2">
+                                        <span className="text-base font-medium text-white">Alemão</span>
+                                        <span className="text-base font-medium text-white">Básico</span>
+                                    </div>
+                                    <div className="flex flex-col border-2 border-azul-claro rounded-full justify-between mb-1 p-1">
+                                        <div className="w-full rounded-full h-2.5 bg-azul-petroleo">
+                                            <div className="bg-azul-claro h-2.5 rounded-full w-1/3"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -78,7 +78,7 @@ const Sobre = () => {
                                             <Dialog.DialogOverlay className="inset-0 fixed bg-black/20">
                                                 <Dialog.DialogContent className="fixed z-10 inset-0 md:inset-auto max-md:top-[40%] lg:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[640px] w-full md:h-[60vh] bg-zinc-800 max-md:rounded-t-3xl lg:rounded-3xl flex flex-col outline-none overflow-hidden ring-1 ring-azul-claro">
                                                     <Dialog.Close className="hover:bg-gray-300 p-2 rounded-full absolute top-2 right-2 hover:text-zinc-900 text-gray-200">
-                                                        <X className="size-5" />
+                                                        <X size={20} />
                                                     </Dialog.Close>
                                                     <div className="flex justify-center p-4 overflow-x-hidden">
                                                         <div className="rounded-lg mt-8 inline-block w-5/6 space-y-3">
@@ -129,7 +129,7 @@ const Sobre = () => {
                     </div>
                 </div>
             </div>
-        </RevealList>
+        </RevealList >
     );
 }
 

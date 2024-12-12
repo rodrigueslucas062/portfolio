@@ -3,11 +3,11 @@ import Image from "next/image";
 import Spotify from "../../../public/images/Spotify.png";
 import Todo from "../../../public/images/Todo.png";
 import Jva from "../../../public/images/Jva.png";
-import ExpUna from '../../../public/images/ExpoUna.png'
-import Custo from '../../../public/images/Custo.png'
-import { ExternalLink, Github, X } from "lucide-react";
+import ExpUna from "../../../public/images/ExpoUna.png";
+import Custo from "../../../public/images/Custo.png";
 import Link from "next/link";
 import * as Dialog from "@radix-ui/react-dialog";
+import { ArrowSquareOut, GithubLogo, X } from "@phosphor-icons/react";
 
 export const informacoes = [
   {
@@ -80,11 +80,27 @@ export const informacoes = [
     descricao_modal:
       "Esse projeto foi desenvolvido para o trabalho final da matéria de Gerenciamento de Projetos da faculdade. Consiste em uma plataforma para disponibilizar os dados da apresentação das turmas de TI. Neste projeto tive a oportunidade de liderar uma pequena equipe de desenvolvimento, desenvolvi o layout no Figma e orientei meus colegas a desenvolver a aplicação, também desenvolvi algumas funcionalidades no site.",
     tecnologias: ["Next.js", "JavaScript", "Figma"],
-    libs: ["Radix-ui", "Sonner", "Lucid-react", "Aceternity UI", 'Framer Motion'],
+    libs: [
+      "Radix-ui",
+      "Sonner",
+      "Lucid-react",
+      "Aceternity UI",
+      "Framer Motion",
+    ],
   },
 ];
 
-const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descricao_modal, tecnologias, libs }) => {
+const Projetos = ({
+  code,
+  demo,
+  imagemSrc,
+  imagemAlt,
+  titulo,
+  descricao,
+  descricao_modal,
+  tecnologias,
+  libs,
+}) => {
   return (
     <Dialog.Root>
       <Dialog.Trigger>
@@ -109,7 +125,7 @@ const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descric
               className="flex bg-zinc-900 rounded-md ring-2 ring-azul-claro justify-center items-center px-3 py-2 gap-2 text-white hover:bg-white/5 hover:transition-all duration-500 ease-in-out"
               onClick={(e) => e.stopPropagation()}
             >
-              <Github size={16} />
+              <GithubLogo size={16} weight="duotone" />
               <span className="text-sm">Code</span>
             </Link>
             <Link
@@ -118,7 +134,7 @@ const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descric
               className="flex bg-zinc-900 rounded-md ring-2 ring-azul-claro justify-center items-center px-3 py-2 gap-2 text-white hover:bg-white/5 hover:transition-all duration-500 ease-in-out"
               onClick={(e) => e.stopPropagation()}
             >
-              <ExternalLink size={16} />
+              <ArrowSquareOut size={16} weight="duotone" />
               <span className="text-sm">Demo</span>
             </Link>
           </div>
@@ -129,7 +145,7 @@ const Projetos = ({ code, demo, imagemSrc, imagemAlt, titulo, descricao, descric
         <Dialog.DialogOverlay className="inset-0 fixed bg-black/20">
           <Dialog.DialogContent className="fixed z-10 inset-0 md:inset-auto max-md:top-[35%] lg:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[640px] w-full md:h-[60vh] bg-zinc-800 max-md:rounded-t-3xl lg:rounded-3xl flex flex-col outline-none overflow-hidden">
             <Dialog.Close className="hover:bg-gray-300 p-2 rounded-full absolute top-2 right-2 hover:text-zinc-900 text-gray-200">
-              <X className="size-5" />
+              <X size={20} />
             </Dialog.Close>
             <div className="flex justify-center p-3 h-screen overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
               <div className="mt-4 inline-block w-5/6 space-y-4">

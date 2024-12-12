@@ -1,6 +1,5 @@
-import Link from "next/link";
+// import Link from "next/link";
 import ProjetosGrid from "./projetos"
-import { ExternalLink } from "lucide-react";
 import { RevealList } from "next-reveal";
 
 const MainContent = () => {

@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router';
 import * as Dialog from "@radix-ui/react-dialog";
-import { FlaskConical, MoreHorizontal, X } from "lucide-react"
 import { navLinks } from './NavLinks';
 import { useEffect, useState } from 'react';
+import { DotsThreeOutline, Flask, X } from '@phosphor-icons/react';
 
 const sectionNames = {
     sobre: "Sobre",
@@ -53,14 +53,14 @@ const Navbar = () => {
                 </ul>
                 <Dialog.Root>
                     <Dialog.Trigger className="lg:hidden bg-zinc-200 hover:bg-zinc-400 text-zinc-900 hover:text-zinc-200 p-2 rounded-full">
-                        <MoreHorizontal size={18} />
+                        <DotsThreeOutline size={20} weight="duotone" />
                     </Dialog.Trigger>
 
                     <Dialog.Portal>
                         <Dialog.DialogOverlay className="inset-0 fixed bg-black/70">
                             <Dialog.DialogContent className="fixed z-10 inset-0 md:inset-auto max-md:top-[50%] lg:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[640px] w-full md:h-[65vh] bg-zinc-800 max-md:rounded-t-3xl lg:rounded-3xl flex flex-col outline-none overflow-hidden">
                                 <Dialog.Close className="hover:bg-gray-300 p-2 rounded-full absolute top-2 right-2 text-gray-200 hover:text-zinc-800">
-                                    <X className="size-5" />
+                                    <X size={20} />
                                 </Dialog.Close>
                                 <ul className="flex flex-col mt-8 py-6 px-8 font-medium space-y-6 rounded-lg">
                                     {navLinks.map((item) => (
@@ -72,7 +72,7 @@ const Navbar = () => {
                                 <div className="flex marker:text-gray-200 font-semibold mt-auto pb-2 w-3/4 lg:w-3/5 mx-auto flex-col space-y-2 bottom-0">
                                     <div className="flex justify-center">
                                         <span className="text-sm">Made for </span>
-                                        <FlaskConical className="text-lime-500" />{" "}
+                                        <Flask size={20} weight="duotone" className="text-lime-500" />{" "}
                                         <span className="text-sm">By Lucas</span>
                                     </div>
                                 </div>
