@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",
+    "@radix-ui/react-tooltip": "^1.1.8",
     "@radix-ui/themes": "^2.0.3",
     "@vercel/analytics": "^1.1.2",
     "@vercel/speed-insights": "^1.0.8",
