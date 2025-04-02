@@ -9,8 +9,8 @@ const CurriculumPage = () => {
   return (
     <div className="flex flex-row w-full h-screen bg-zinc-900">
       <Sidebar />
-      <div className="flex w-full h-screen flex-col items-center py-24 overflow-y-auto">
-        <div className="flex flex-col space-y-10 w-1/3">
+      <div className="flex w-full h-screen flex-col items-center py-12 lg:py-24 overflow-y-auto">
+        <div className="flex flex-col space-y-10 p-6 lg:w-1/3">
           <section className="flex gap-4 ">
             <Image className="mb-3 rounded-full" src={Perfil} alt="Lucas Rodrigues" width={125} height={125} />
             <div className="flex flex-col justify-start space-y-3">
@@ -29,9 +29,9 @@ const CurriculumPage = () => {
               Sou analista de sistemas e UX/UI em formação, com foco no desenvolvimento front-end utilizando tecnologias como React e Next.js. Busco sempre aprimorar minhas habilidades e aplicar novos conhecimentos. Além disso, sou entusiasta em criar novas ferramentas e sempre em busca de novos desafios no universo da tecnologia.
             </span>
           </section>
-          <section className="flex flex-col justify-start w-2/3">
+          <section className="flex flex-col justify-start lg:w-2/3">
             <h2 className="text-white font-semibold mt-8">Contato</h2>
-            <div className="flex flex-col gap-4 space-y-1">
+            <div className="flex flex-col space-y-4 w-full">
               <div className="flex justify-between items-center group">
                 <span className="text-zinc-400">
                   Website
