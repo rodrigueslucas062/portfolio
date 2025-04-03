@@ -35,3 +35,65 @@ export const EducationItem = ({ date, institution, course }) => (
     </div>
   </div>
 );
+
+export const contactItems = [
+  {
+    label: "Website",
+    href: "/",
+    text: "rodrigueslucas.vercel.app",
+  },
+  {
+    label: "Github",
+    href: "https://github.com/rodrigueslucas062",
+    text: "rodrigueslucas062",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/rodrigueslucasdev/",
+    text: "rodrigueslucasdev",
+  },
+  {
+    label: "Email",
+    href: "mailto:rodrigueslucas062@gmail.com",
+    text: "rodrigueslucas062@gmail.com",
+  },
+];
+
+export const experienceItems = [
+  {
+    date: "Jun/2024 - Atualmente",
+    company: "CP3 Tecnologia",
+    description: "Atuo utilizando React para a construção de aplicações web utilizando a arquitetura de Microfrontend e estilização de interfaces, UX/UI promovendo uma experiência de usuário intuitiva e visualmente atraente.",
+  },
+  {
+    date: "Mai/2023 - Dez/2023",
+    company: "RentzApp",
+    description: "Atuei utilizando React e Next.js na criação de componentes, páginas estáticas e dinâmicas, integração com APIs GraphQL para a listagem de produtos, e funcionalidades SEO.",
+  },
+  {
+    date: "Abr/2022 - Nov/2022",
+    company: "Dunning",
+    description: "Desempenhei um papel na manutenção do banco de dados, implementação de melhorias com Java e HTML, e na documentação e teste das APIs internas.",
+  },
+];
+
+export const projectItems = [
+  {
+    status: "Em andamento",
+    name: "Synapse flow",
+    description: "Aplicação web para gerenciamento de tarefas e projetos, estilo Notion e Obsidian, utilizando React, Next.js e Tailwind CSS.",
+  },
+];
+
+export const educationItems = [
+  {
+    date: "2021 - 2024",
+    institution: "Centro Universitário UNA",
+    course: "Graduação em Sistemas de Informação",
+  },
+  {
+    date: "2017 - 2019",
+    institution: "Colégio Cotemig",
+    course: "Técnico em Informática",
+  },
+];

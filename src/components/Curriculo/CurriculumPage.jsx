@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { Sidebar } from "../sidebar/Sidebar";
-import Perfil from '../../public/images/perfil.jpeg';
+import Perfil from '../../../public/images/perfil.jpeg';
 import Link from "next/link";
 import { ArrowSquareOut } from "@phosphor-icons/react";
-import { ContactItem, EducationItem, ExperienceItem, SectionTitle } from "./CurriculumSections";
+import { ContactItem, contactItems, EducationItem, educationItems, ExperienceItem, experienceItems, projectItems, SectionTitle } from "./CurriculumSections";
 
 
 const CurriculumPage = () => {
@@ -32,75 +32,54 @@ const CurriculumPage = () => {
 
           <SectionTitle title="Contato" />
           <div className="flex flex-col space-y-4 w-full">
-            <ContactItem
-              label="Website"
-              href={"/"}
-              text="rodrigueslucas.vercel.app"
-            />
-            <ContactItem
-              label="Github"
-              href="https://github.com/rodrigueslucas062"
-              text="rodrigueslucas062"
-            />
-            <ContactItem
-              label="LinkedIn"
-              href="https://www.linkedin.com/in/rodrigueslucasdev/"
-              text="rodrigueslucasdev"
-            />
-            <ContactItem
-              label="Email"
-              href="mailto:rodrigueslucas062@gmail.com"
-              text="rodrigueslucas062@gmail.com"
-            />
+            {contactItems.map((item) => (
+              <ContactItem
+                key={item.label}
+                label={item.label}
+                href={item.href}
+                text={item.text}
+              />
+            ))}
           </div>
 
           <SectionTitle title="Trabalhos" />
           <div className="flex flex-col space-y-4">
-            <ExperienceItem
-              date="Jun/2024 - Atualmente"
-              company="CP3 Tecnologia"
-              description="Atuo utilizando React para a construção de aplicações web utilizando a arquitetura de Microfrontend e estilização de interfaces, UX/UI promovendo uma experiência de usuário intuitiva e visualmente atraente."
-            />
-            <ExperienceItem
-              date="Mai/2023 - Dez/2023"
-              company="RentzApp"
-              description="Atuei utilizando React e Next.js na criação de componentes, páginas estáticas e dinâmicas, integração com APIs GraphQL para a listagem de produtos, e funcionalidades SEO."
-            />
-            <ExperienceItem
-              date="Abr/2022 - Nov/2022"
-              company="Dunning"
-              description="Desempenhei um papel na manutenção do banco de dados, implementação de melhorias com Java e HTML, e na documentação e teste das APIs internas."
-            />
+            {experienceItems.map((item) => (
+              <ExperienceItem
+                key={item.company}
+                date={item.date}
+                company={item.company}
+                description={item.description}
+              />
+            ))}
           </div>
 
           <SectionTitle title="Projetos" />
           <div className="flex flex-col space-y-4">
-            <div className="flex gap-4 group">
-              <span className="text-zinc-400 text-xs w-full max-w-[130px]">Em andamento</span>
-              <div className="flex flex-col justify-start space-y-1">
-                <span className="text-white font-semibold">Synapse flow</span>
-                <span className="text-sm text-zinc-400">
-                  Aplicação web para gerenciamento de tarefas e projetos, estilo Notion e Obsidian, utilizando React, Next.js e Tailwind CSS.
-                </span>
+            {projectItems.map((item) => (
+              <div key={item.name} className="flex gap-4 group">
+                <span className="text-zinc-400 text-xs w-full max-w-[130px]">{item.status}</span>
+                <div className="flex flex-col justify-start space-y-1">
+                  <span className="text-white font-semibold">{item.name}</span>
+                  <span className="text-sm text-zinc-400">{item.description}</span>
+                </div>
+                <div className="invisible group-hover:visible text-sm text-zinc-400 items-center transition-transform duration-500 transform group-hover:translate-x-2">
+                  <ArrowSquareOut size={16} weight="duotone" />
+                </div>
               </div>
-              <div className="invisible group-hover:visible text-sm text-zinc-400 items-center transition-transform duration-500 transform group-hover:translate-x-2">
-                <ArrowSquareOut size={16} weight="duotone" />
-              </div>
-            </div>
+            ))}
           </div>
 
           <SectionTitle title="Educação" />
           <div className="flex flex-col space-y-4">
-            <EducationItem
-              date="2021 - 2024"
-              institution="Centro Universitário UNA"
-              course="Graduação em Sistemas de Informação"
-            />
-            <EducationItem
-              date="2017 - 2019"
-              institution="Colégio Cotemig"
-              course="Técnico em Informática"
-            />
+            {educationItems.map((item) => (
+              <EducationItem
+                key={item.institution}
+                date={item.date}
+                institution={item.institution}
+                course={item.course}
+              />
+            ))}
           </div>
         </div>
       </div>
