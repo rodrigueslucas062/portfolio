@@ -9,7 +9,9 @@ import { RevealList } from "next-reveal";
 const CurriculumPage = () => {
   return (
     <div className="flex flex-row w-full h-screen bg-zinc-900">
-      <Sidebar />
+      <div className="hidden">
+        <Sidebar />
+      </div>
       <div className="flex w-full h-screen flex-col items-center py-12 lg:pt-24 lg:p-48 overflow-y-auto">
         <div className="flex flex-col space-y-12 p-6 lg:w-1/3">
           <RevealList
