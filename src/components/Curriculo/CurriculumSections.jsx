@@ -2,7 +2,7 @@ import { ArrowSquareOut } from "@phosphor-icons/react";
 import Link from "next/link";
 
 export const SectionTitle = ({ title }) => (
-  <h2 className="text-white font-semibold mt-8">{title}</h2>
+  <h2 className="text-white font-semibold mt-12">{title}</h2>
 );
 
 
