@@ -17,8 +17,8 @@ export const ContactItem = ({ label, href, text }) => (
 );
 
 export const ExperienceItem = ({ date, company, description }) => (
-  <div className="flex gap-4 group">
-    <span className="text-zinc-400 text-xs w-full max-w-[130px]">{date}</span>
+  <div className="flex gap-8 group">
+    <span className="text-zinc-400 text-xs min-w-fit pt-1">{date}</span>
     <div className="flex flex-col justify-start space-y-1">
       <span className="text-white font-semibold">{company}</span>
       <span className="text-sm text-zinc-400">{description}</span>
@@ -27,8 +27,8 @@ export const ExperienceItem = ({ date, company, description }) => (
 )
 
 export const EducationItem = ({ date, institution, course }) => (
-  <div className="flex gap-4 group">
-    <span className="text-zinc-400 text-xs w-full max-w-[130px]">{date}</span>
+  <div className="flex gap-8 group">
+    <span className="text-zinc-400 text-xs min-w-fit pt-1">{date}</span>
     <div className="flex flex-col justify-start space-y-1">
       <span className="text-white font-semibold">{institution}</span>
       <span className="text-sm text-zinc-400">{course}</span>
@@ -61,17 +61,17 @@ export const contactItems = [
 
 export const experienceItems = [
   {
-    date: "Jun/2024 - Atualmente",
+    date: "2024 - Hoje",
     company: "CP3 Tecnologia",
     description: "Atuo utilizando React para a construção de aplicações web utilizando a arquitetura de Microfrontend e estilização de interfaces, UX/UI promovendo uma experiência de usuário intuitiva e visualmente atraente.",
   },
   {
-    date: "Mai/2023 - Dez/2023",
+    date: "2023 - 2023",
     company: "RentzApp",
     description: "Atuei utilizando React e Next.js na criação de componentes, páginas estáticas e dinâmicas, integração com APIs GraphQL para a listagem de produtos, e funcionalidades SEO.",
   },
   {
-    date: "Abr/2022 - Nov/2022",
+    date: "2022 - 2022",
     company: "Dunning",
     description: "Desempenhei um papel na manutenção do banco de dados, implementação de melhorias com Java e HTML, e na documentação e teste das APIs internas.",
   },

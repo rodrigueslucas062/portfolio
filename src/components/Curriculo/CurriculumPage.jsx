@@ -44,7 +44,7 @@ const CurriculumPage = () => {
 
             <section>
               <SectionTitle title="Contato" />
-              <div className="flex flex-col space-y-4 w-full">
+              <div className="flex flex-col space-y-4 w-full pt-2">
                 {contactItems.map((item) => (
                   <ContactItem
                     key={item.label}
@@ -57,8 +57,8 @@ const CurriculumPage = () => {
             </section>
 
             <section>
-              <SectionTitle title="Trabalhos" />
-              <div className="flex flex-col space-y-4">
+              <SectionTitle title="Experiência de trabalho" />
+              <div className="flex flex-col space-y-4 w-full pt-2">
                 {experienceItems.map((item) => (
                   <ExperienceItem
                     key={item.company}
@@ -69,39 +69,55 @@ const CurriculumPage = () => {
                 ))}
               </div>
             </section>
-            </RevealList>
+          </RevealList>
 
-            <section>
-              <SectionTitle title="Projetos" />
-              <div className="flex flex-col space-y-4">
-                {projectItems.map((item) => (
-                  <div key={item.name} className="flex gap-4 group">
-                    <span className="text-zinc-400 text-xs w-full max-w-[130px]">{item.status}</span>
-                    <div className="flex flex-col justify-start space-y-1">
-                      <span className="text-white font-semibold">{item.name}</span>
-                      <span className="text-sm text-zinc-400">{item.description}</span>
-                    </div>
-                    <div className="invisible group-hover:visible text-sm text-zinc-400 items-center transition-transform duration-500 transform group-hover:translate-x-2">
-                      <ArrowSquareOut size={16} weight="duotone" />
-                    </div>
+          <section>
+            <SectionTitle title="Projetos" />
+            <div className="flex flex-col space-y-4 w-full pt-2">
+              {projectItems.map((item) => (
+                <div key={item.name} className="flex gap-4 group">
+                  <span className="text-zinc-400 text-xs min-w-fit">{item.status}</span>
+                  <div className="flex flex-col justify-start space-y-1">
+                    <span className="text-white font-semibold">{item.name}</span>
+                    <span className="text-sm text-zinc-400">{item.description}</span>
                   </div>
-                ))}
-              </div>
-            </section>
+                  <div className="invisible group-hover:visible text-sm text-zinc-400 items-center transition-transform duration-500 transform group-hover:translate-x-2">
+                    <Link href={'/'} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      <ArrowSquareOut size={16} weight="duotone" />
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
 
-            <section>
-              <SectionTitle title="Educação" />
-              <div className="flex flex-col space-y-4">
-                {educationItems.map((item) => (
-                  <EducationItem
-                    key={item.institution}
-                    date={item.date}
-                    institution={item.institution}
-                    course={item.course}
-                  />
-                ))}
-              </div>
-            </section>
+          <section>
+            <SectionTitle title="Educação" />
+            <div className="flex flex-col space-y-4">
+              {educationItems.map((item) => (
+                <EducationItem
+                  key={item.institution}
+                  date={item.date}
+                  institution={item.institution}
+                  course={item.course}
+                />
+              ))}
+            </div>
+          </section>
+
+          {/* <section>
+            <SectionTitle title="Certificados" />
+            <div className="flex flex-col space-y-4">
+              {educationItems.map((item) => (
+                <EducationItem
+                  key={item.institution}
+                  date={item.date}
+                  institution={item.institution}
+                  course={item.course}
+                />
+              ))}
+            </div>
+          </section> */}
         </div>
       </div>
     </div>
