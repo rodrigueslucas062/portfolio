@@ -1,17 +1,16 @@
-import { ArrowSquareOut } from "@phosphor-icons/react";
+import { ArrowSquareOutIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 
 export const SectionTitle = ({ title }) => (
   <h2 className="text-white font-semibold mt-12">{title}</h2>
 );
 
-
 export const ContactItem = ({ label, href, text }) => (
   <div className="flex justify-between items-center group">
     <span className="text-zinc-400">{label}</span>
     <Link href={href} className="flex items-center gap-2 group-hover:decoration-2 group-hover:underline text-zinc-400">
       <span className="text-white">{text}</span>
-      <ArrowSquareOut size={16} weight="duotone" />
+      <ArrowSquareOutIcon size={16} weight="duotone" />
     </Link>
   </div>
 );
@@ -79,9 +78,17 @@ export const experienceItems = [
 
 export const projectItems = [
   {
-    status: "Em andamento",
+    status: "Andamento",
     name: "Synapse flow",
     description: "Aplicação web para gerenciamento de tarefas e projetos, estilo Notion e Obsidian, utilizando React, Next.js e Tailwind CSS.",
+    href: "https://synapse-flow-website.vercel.app/"
+  },
+  {
+    status: "2024 - 2024",
+    name: "Égide",
+    description: "Projeto de iniciação científica que consiste em uma plataforma para auxiliar na gestão de projetos e ideias usando Blockchain, desenvolvida utilizando tecnologias como Next.js, Chakra Ui, Capacitor e Prisma.",
+    href: "#"
+
   },
 ];
 
