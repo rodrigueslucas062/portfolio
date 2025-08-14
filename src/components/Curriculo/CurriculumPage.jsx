@@ -14,7 +14,7 @@ import {
   projectItems,
   SectionTitle
 } from "./CurriculumSections";
-import { Reveal } from "./reveal";
+import { Reveal } from "./Reveal";
 
 const CurriculumPage = () => {
   return (
